@@ -26,15 +26,21 @@ jQuery(document).ready(function() {
 		$('nav').toggleClass('navbar-no-bg');
 	});
 
+	$('.navbar-toggle').click(function() {
+		if($('nav').hasClass('navbar-no-bg')) {
+			$('nav').toggleClass('navbar-show-bg');
+		}
+	});
+
     /*
         Wow
     */
     new WOW().init();
 
 		// particles.js
-		/*particlesJS.load('particles-container', 'assets/js/particlesjs-config.json', function() {
+		particlesJS.load('particles-container', 'assets/js/particlesjs-config.json', function() {
 		  console.log('callback - particles.js config loaded');
-		});*/
+		});
 
 });
 

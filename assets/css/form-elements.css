@@ -1,6 +1,6 @@
 
-input[type="text"], 
-textarea, 
+input[type="text"],
+textarea,
 textarea.form-control {
 	height: 50px;
     margin: 0;
@@ -18,15 +18,15 @@ textarea.form-control {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
-textarea, 
+textarea,
 textarea.form-control {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	line-height: 30px;
 }
 
-input[type="text"]:focus, 
-textarea:focus, 
+input[type="text"]:focus,
+textarea:focus,
 textarea.form-control:focus {
 	outline: 0;
 	background: #fff;
@@ -41,16 +41,12 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 
 
 button.btn {
-	height: 50px;
     margin: 0;
-    padding: 0 20px;
     vertical-align: middle;
-    background: #66d6c5;
     border: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 50px;
     color: #fff;
     -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
     text-shadow: none;
@@ -65,4 +61,3 @@ button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none
 button.btn:focus { outline: 0; opacity: 0.6; background: #66d6c5; color: #fff; }
 
 button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #66d6c5; color: #fff; }
-
