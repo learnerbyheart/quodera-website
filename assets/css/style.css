@@ -517,3 +517,32 @@ footer {
 .footer-copyright {
 	margin-top: 25px;
 }
+
+/***** Impressum *****/
+.impressum h1, .impressum h2, .impressum p{
+  text-align: left;
+  color: white;
+}
+
+.impressum h2 {
+  font-size: 24px;
+}
+
+.impressum {
+  background: #4d85cd;
+  background: -moz-linear-gradient(-45deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
+  background: -webkit-linear-gradient(-45deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
+  background: linear-gradient(135deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d85cd', endColorstr='#2d52cc',GradientType=1 );
+  min-height: 100vh;
+}
+
+.impressum-link-container {
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+.impressum-link {
+  font-size: 20px;
+  color: #3762cd;
+}
