@@ -6,7 +6,8 @@ const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
 const runSequence = require('run-sequence');
 
-const templateData = require('./src/data/context.json');
+//const templateData = require('./src/data/context.json');
+const templateData = {};
 
 gulp.task('build-html', function() {
   const options = {
@@ -61,7 +62,7 @@ gulp.task('build-assets', function() {
 
 gulp.task('watch', function() {
   runSequence(['build-html', 'build-js', 'build-css', 'build-assets']);
-  watch('src/*.html', function() {
+  watch(['src/*.html', 'src/templates/*.hbs'], function() {
     runSequence('build-html');
   });
   watch('src/js/*.js', function() {
