@@ -22,8 +22,13 @@ jQuery(document).ready(function() {
 		scroll_to($(this), $('nav').outerHeight());
 	});
 	// toggle "navbar-no-bg" class
-	$('.top-content .text').waypoint(function() {
+	$('.claim').waypoint(function() {
 		$('nav').toggleClass('navbar-no-bg');
+	});
+
+	$('.top-content .icon').waypoint(function() {
+		$('nav .navbar-brand').toggleClass('navbar-no-icon');
+		$('.top-content .icon').toggleClass('top-content-no-icon');
 	});
 
 	$('.navbar-toggle').click(function() {
@@ -41,21 +46,5 @@ jQuery(document).ready(function() {
 		particlesJS.load('particles-container', 'assets/js/particlesjs-config.json', function() {
 		  console.log('callback - particles.js config loaded');
 		});
-
-});
-
-
-jQuery(window).load(function() {
-
-	/*
-		Loader
-	*/
-	$(".loader-img").fadeOut();
-	$(".loader").delay(1000).fadeOut("slow");
-
-	/*
-		Hidden images
-	*/
-	$(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
 
 });
