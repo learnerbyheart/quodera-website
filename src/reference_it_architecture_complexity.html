@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quodera - Referenzen</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Merriweather+Sans:300,300i,400,400i,700,700i,800,800i|Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="bundle.css">
+
+  <style>
+
+    .featureh3 {
+      text-transform: none;
+      line-height: normal;
+      font-family: BentonSans-Medium;
+      font-size: 45px;
+    }
+
+    .image-cropper {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cropped-image {
+      display: inline;
+      margin: 0 auto;
+      height: 100%;
+      width: auto;
+    }
+
+    .image {
+      margin-left: auto;
+      margin-right: auto;
+      height: 300px;
+      padding-top: 10px;
+    }
+
+    .logo {
+      padding-left: 10px;
+      width: auto;
+      height:40px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- Top menu -->
+{{> header}}
+
+<!-- Required because otherwise content is below the header -->
+<div style="padding-top: 80px;" />
+
+<!-- Reference -->
+<div class="component two-col padding-top-small">
+  <div class="container text-center-small">
+    <div style="margin-bottom: 30px;">
+    <h3 class="featureh3">Komplexität in IT-Architektur verstehen.</h3>
+    </div>
+    <div class="row margin-vertical-medium" >
+      <div class="col-sm-3 margin-bottom-small">
+        <img class="image" src="assets/img/complex_tree.png">
+      </div>
+      <div class="col-sm-9">
+        <p class="margin-top-small" style="font-family: BentonSans-Medium; font-size: 15px; text-align: justify;">
+          Die IT-Architekturen von Banken sind geprägt von zahlreichen heterogenen Systemen. Durch historisches Wachstum der Applikationslandschaft und Zusammenschlüsse mit anderen Instituten entstehen komplexe und schwer überschaubare Architekturen. Für eine international tätige Bank hat Quodera die Architektur eines Geschäftsbereichs analysiert, formalisiert und Komplexitätstreiber identifiziert. Die Komplexität wurde hierbei über die Anzahl und Heterogenität der Schnittstellen bestimmt. Die visuelle Darstellung der Komplexität hilft Verantwortlichen innerhalb der Bank Herausforderungen in der Architektur zum Management zu kommunizieren und Handlungsbedarf zu belegen. Eine Formalisierung von IT-Architektur und Darstellung von Komplexität kann für Unternehmen verschiedener Branchen eine wichtige Entscheidungshilfe für strategische Architekturentscheidungen sein.
+        </p>
+        <div style="text-align: left; margin-top: 25px;">
+          {{> logo-jupyter}} {{> logo-python}} {{> logo-numpy}} {{> logo-azure}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {{> contacts}}
+
+  <!-- Footer -->
+  {{> footer}}
+
+  <!-- Javascript -->
+  <script src="bundle.js"></script>
+
+</body>
+
+</html>

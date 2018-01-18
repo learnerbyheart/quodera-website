@@ -633,3 +633,11 @@ only screen and (                min-resolution: 2dppx) {
     }
 
 }
+
+@font-face {
+  font-family: 'BentonSans-Medium';
+  src: url('fonts/BentonSans-Medium.woff') format('woff'),
+  url('fonts/BentonSans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
