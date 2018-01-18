@@ -11,41 +11,6 @@
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Merriweather+Sans:300,300i,400,400i,700,700i,800,800i|Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="bundle.css">
-
-  <style>
-
-    .featureh3 {
-      text-transform: none;
-      line-height: normal;
-      font-family: BentonSans-Medium;
-      font-size: 45px;
-    }
-
-    .image-cropper {
-      width: 300px;
-      height: 300px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 50%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cropped-image {
-      display: inline;
-      margin: 0 auto;
-      height: 100%;
-      width: auto;
-    }
-
-    .image {
-      margin-left: auto;
-      margin-right: auto;
-      height: 300px;
-    }
-
-  </style>
-
 </head>
 
 <body>
@@ -54,25 +19,25 @@
     {{> header}}
 
     <!-- Required because otherwise content is below the header -->
-    <div style="padding-top: 80px;" />
+    <div class="references-top-spacer" />
 
       <!-- Reference -->
       <div class="component two-col padding-top-small">
         <div class="container text-center-small">
           <div class="row margin-vertical-medium" >
             <div class="col-sm-5 margin-bottom-small">
-              <img class="image" src="assets/img/kuka.png">
+              <img class="references-overview-image" src="assets/img/kuka.png">
             </div>
             <div class="col-sm-7">
 
-              <h3 class="featureh3">Maschinenausfälle erkennen, bevor sie passieren.</h3>
+              <h3 class="references-h3">Maschinenausfälle erkennen, bevor sie passieren.</h3>
 
-              <p class="margin-top-small" style="font-family: BentonSans-Medium; font-size: 20px;">
+              <p class="margin-top-small references-overview-description">
                 Wie Quodera hilft, Ausfälle von Schweißrobotern mit Sensordaten vorherzusagen.
               </p>
 
               <div class="margin-top-medium">
-                <a class="btn margin-right-small" href="#link">Mehr erfahren</a>
+                <a class="btn margin-right-small" href="reference_predictive_maintenance.html">Mehr erfahren</a>
                 <a class="btn margin-right-small" href="#link">Demo</a>
               </div>
 
@@ -89,20 +54,20 @@
 
               <div class="col-sm-7">
 
-                <h3 class="featureh3">Komplexität in IT-Architektur verstehen.</h3>
+                <h3 class="references-h3">Komplexität in IT-Architektur verstehen.</h3>
 
-                <p class="margin-top-small" style="font-family: BentonSans-Medium; font-size: 20px;">
+                <p class="margin-top-small references-overview-description">
                   Wie Quodera Engpässe in einer heterogenen Systemlandschaft identifiziert.
                 </p>
 
                 <div class="margin-top-medium">
-                  <a class="btn margin-right-small" href="#link">Mehr erfahren</a>
+                  <a class="btn margin-right-small" href="reference_it_architecture_complexity.html">Mehr erfahren</a>
                   <a class="btn margin-right-small" href="#link">Demo</a>
                 </div>
 
               </div>
               <div class="col-sm-5 margin-bottom-small">
-                <img class="image" src="assets/img/complex_tree.png">
+                <img class="references-overview-image" src="assets/img/complex_tree.png">
               </div>
             </div>
           </div>
@@ -114,18 +79,18 @@
             <div class="container text-center-small">
               <div class="row margin-vertical-medium" >
                 <div class="col-sm-5 margin-bottom-small">
-                  <img class="image" src="assets/img/conversation.png">
+                  <img class="references-overview-image" src="assets/img/conversation.png">
                 </div>
                 <div class="col-sm-7">
 
-                  <h3 class="featureh3">Wissen, was die Kollegen denken.</h3>
+                  <h3 class="references-h3">Wissen, was die Kollegen denken.</h3>
 
-                  <p class="margin-top-small" style="font-family: BentonSans-Medium; font-size: 20px;">
+                  <p class="margin-top-small references-overview-description">
                     Wie Quodera mit einer Multi-Plattform-App Umfragen im Unternehmen ermöglicht.
                   </p>
 
                   <div class="margin-top-medium">
-                    <a class="btn margin-right-small" href="#link">Mehr erfahren</a>
+                    <a class="btn margin-right-small" href="reference_company_poll.html">Mehr erfahren</a>
                     <a class="btn margin-right-small" href="#link">Demo</a>
                   </div>
 
@@ -142,30 +107,27 @@
 
                   <div class="col-sm-7">
 
-                    <h3 class="featureh3">Informationen in großen Datenmengen finden.</h3>
+                    <h3 class="references-h3">Informationen in großen Datenmengen finden.</h3>
 
-                    <p class="margin-top-small" style="font-family: BentonSans-Medium; font-size: 20px;">
+                    <p class="margin-top-small references-overview-description">
                       Wie Quodera aus 500.000 E-Mails einen Informationsexplorer baut.
                     </p>
 
                     <div class="margin-top-medium">
-                      <a class="btn margin-right-small" href="#link">Mehr erfahren</a>
+                      <a class="btn margin-right-small" href="reference_knowledge_discovery.html">Mehr erfahren</a>
                       <a class="btn margin-right-small" href="#link">Demo</a>
                     </div>
 
                   </div>
                   <div class="col-sm-5 margin-bottom-small">
-                    <div class="image-cropper">
-                      <img class="image cropped-image" src="assets/img/needle_hay.jpg">
+                    <div class="references-overview-image-cropper">
+                      <img class="references-overview-cropped-image" src="assets/img/needle_hay.jpg">
                     </div>
                   </div>
                 </div>
               </div>
 
     {{> contacts}}
-
-    <!-- Footer -->
-    {{> footer}}
 
     <!-- Javascript -->
     <script src="bundle.js"></script>
