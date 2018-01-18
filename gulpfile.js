@@ -4,6 +4,7 @@ const watch = require('gulp-watch');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
+const less = require('gulp-less');
 const runSequence = require('run-sequence');
 
 //const templateData = require('./src/data/context.json');
@@ -22,14 +23,13 @@ gulp.task('build-html', function() {
 
 gulp.task('build-js', function() {
   const srcFiles = [
-    'src/js/libs/jquery-1.11.1.js',
-    'src/js/libs/jquery-1.11.1.min.js',
-    'src/js/libs/bootstrap.min.js',
+    'src/js/libs/jquery-3.2.1.js',
+    'src/js/libs/jquery-3.2.1.min.js',
     'src/js/libs/*.js',
-    'src/js/script.js'
+    'src/js/scripts.js'
   ]
   if(process.env.NODE_ENV !== 'production') {
-    srcFiles.push('!src/js/*.min.js')
+    srcFiles.push('!src/js/libs/*.min.js')
   }
   return gulp.src(srcFiles)
     .pipe(concat('bundle.js'))
@@ -37,11 +37,17 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('build-css', function() {
+gulp.task('compile-less', function() {
+  return gulp.src('src/css/styles.less')
+      .pipe(less())
+      .pipe(gulp.dest('src/css'));
+});
+
+gulp.task('build-css', ['compile-less'], function() {
   const srcFiles = [
     'src/css/libs/bootstrap.min.css',
     'src/css/libs/*.css',
-    'src/css/style.css',
+    'src/css/styles.css',
   ]
   if(process.env.NODE_ENV !== 'production') {
     srcFiles.push('!src/css/*.min.css')
@@ -68,7 +74,7 @@ gulp.task('watch', function() {
   watch('src/js/*.js', function() {
     runSequence('build-js');
   });
-  watch('src/css/*.css', function() {
+  watch(['src/css/libs/*.css', 'src/css/*.less'], function() {
     runSequence('build-css');
   });
   watch('src/assets/**/*', function() {
