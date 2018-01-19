@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quodera - Referenzen</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Merriweather+Sans:300,300i,400,400i,700,700i,800,800i|Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="bundle.css">
+</head>
+
+<body>
+
+<!-- Top menu -->
+{{> header}}
+
+<!-- Required because otherwise content is below the header -->
+<div class="references-top-spacer" />
+
+<!-- Reference -->
+<div class="component two-col padding-top-small">
+  <div class="container text-center-small">
+    <div class="references-detail-header">
+    <h3 class="references-h3">Maschinenausfälle erkennen, bevor sie passieren.</h3>
+    </div>
+    <div class="row margin-vertical-medium" >
+      <div class="col-sm-3 margin-bottom-small">
+        <img class="references-detail-image" src="assets/img/kuka.png">
+      </div>
+      <div class="col-sm-9">
+        <p class="margin-top-small references-detail-description">
+          Moderne Fertigungsanlagen in der Automobilindustrie setzen auf  den Einsatz von Industrierobotern. Damit diese effizient arbeiten können, müssen Stillstände und Ausfallzeiten vermieden werden. Für einen großen deutschen Automobilhersteller analysierte Quodera die Sensordaten von Industrierobotern mit dem Ziel, Ausfallzeiten zu reduzieren. Mit Methoden des maschinellen Lernens wurden Anomalien in den Daten identifiziert, die auf künftige Ausfälle hinweisen. Ähnliche Analysen können in verschiedenen Bereichen der Produktion oder dem Betrieb von Anlagen eingesetzt werden, um in Maschinendaten relevante Muster zu erkennen und zukünftige Ereignisse vorhersagen.
+        </p>
+        <div class="references-logo-area">
+          {{> logo-jupyter}} {{> logo-python}} {{> logo-numpy}} {{> logo-azure}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {{> contacts}}
+
+  <!-- Javascript -->
+  <script src="bundle.js"></script>
+
+</body>
+
+</html>

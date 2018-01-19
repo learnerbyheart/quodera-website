@@ -361,6 +361,87 @@ ul.navbar-nav {
   margin-top: 15px;
   padding: 10px 0;
 }
+/***** References *****/
+.references-h3 {
+  text-transform: none;
+  line-height: normal;
+  font-family: BentonSans-Medium;
+  font-size: 45px;
+}
+.references-overview-image-cropper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.references-overview-cropped-image {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+.references-overview-image {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 300px;
+}
+.references-top-spacer {
+  padding-top: 80px;
+}
+.references-overview-description {
+  font-family: BentonSans-Medium;
+  font-size: 20px;
+}
+.references-logo {
+  width: auto;
+  height: 40px;
+}
+.references-logo-wrapper {
+  display: inline-block;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+.references-detail-header {
+  margin-bottom: 30px;
+}
+.references-detail-description {
+  font-family: BentonSans-Medium;
+  font-size: 15px;
+  text-align: justify;
+}
+.references-logo-area {
+  text-align: left;
+  margin-top: 25px;
+}
+.references-detail-image {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 250px;
+}
+.references-detail-cropped-image {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+.references-detail-image-cropper {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@font-face {
+  font-family: 'BentonSans-Medium';
+  src: url('fonts/BentonSans-Medium.woff') format('woff'), url('fonts/BentonSans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @media (max-width: 767px) {
   .navbar-brand {
     margin-left: 15px;
