@@ -1,0 +1,49 @@
+<!-- Features -->
+<div class="section-container process">
+    <div class="container">
+
+      <h2>Wie machen wir es?</h2>
+
+      <div class="process-bar">
+        <div class="active process-bar-step">
+          <div class="circle">1</div>
+          <label>Idee</label>
+        </div>
+        <div class="process-bar-step">
+          <div class="circle">2</div>
+          <label>Machbarkeit</label>
+        </div>
+        <div class="process-bar-step">
+          <div class="circle">3</div>
+          <label>Prototyp</label>
+        </div>
+        <div class="process-bar-step">
+          <div class="circle">4</div>
+          <label>Einsatz</label>
+        </div>
+        <div class="process-bar-step">
+          <div class="circle">5</div>
+          <label>Wartung</label>
+        </div>
+        <div class="base-bar"></div>
+        <div class="active-bar"></div>
+      </div>
+
+      <div class="process-steps">
+        {{#each servicesProcess}}
+        <div class="{{#if @first}}active {{/if}}process-step segment">
+          <h3>{{title}}</h3>
+          <div class="services-content">
+            <img src="{{image}}" />
+            <ul>
+              {{#each items}}
+              <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+
+    </div>
+</div>

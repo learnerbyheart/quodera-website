@@ -1,0 +1,47 @@
+{
+  "name": "Lucas",
+  "servicesProcess": [
+    {
+      "title": "Am Anfang steht die Idee",
+      "image": "./assets/img/idea.png",
+      "items": [
+        "Haben Sie schon eine Idee was Sie mit KI machen wollen? Dann sind Sie bei uns genau richtig!",
+        "Sie haben noch keine konkrete Idee, wie Sie KI einsetzen wollen? Dann können wir Sie gerne beraten"
+      ]
+    }, {
+      "title": "Kann KI dieses Problem lösen?",
+      "image": "./assets/img/zoom-tool.png",
+      "items": [
+        "Welche Chancen und Risiken bestehen?",
+        "Wie lässt sich der Erfolg der Lösung messen?",
+        "Wie ist der Zeitplan des Projekts?"
+      ]
+    }, {
+      "title": "Wir entwickeln einen KI Prototypen",
+      "image": "./assets/img/cube.png",
+      "items": [
+        "Sammeln und Verarbeiten der benötigten Daten",
+        "Auswahl der besten KI Methoden",
+        "Entwicklung von KI Modellen in der Testumgebung",
+        "Evaluation der KI Modelle",
+        "Entscheidung für ein Modell"
+      ]
+    }, {
+      "title": "Wir setzen die KI Lösung ein",
+      "image": "./assets/img/computer.png",
+      "items": [
+        "Entwickeln einer Softwarelösung",
+        "Integration des KI Modells in ein bestehendes System",
+        "Dokumentation und Schulung Ihrer Mitarbeiter"
+
+      ]
+    }, {
+      "title": "Wir warten Ihre KI Lösung",
+      "image": "./assets/img/settings.png",
+      "items": [
+        "Kontinuierliches Überwachen der KI Lösung",
+        "Anpassung an neue Gegebenheiten"
+      ]
+    }
+  ]
+}

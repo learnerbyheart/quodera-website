@@ -158,5 +158,20 @@ jQuery(document).ready(function() {
 
 		// particles.js
 		window.particlesJS('particles-container', particlesConfig);
+    // process in services
+    $('.process-bar-step').each(function(idx, processStep) {
+      $(processStep).on('click', (function(idx) {
+        return function() {
+          // adjust bar
+          $('.process-bar-step').removeClass('active');
+          $('.process-bar-step').eq(idx).addClass('active');
+          $('.process-bar .active-bar').width((idx * 20) + '%');
+
+          // adjust content
+          $('.process-steps .process-step').removeClass('active');
+          $('.process-steps .process-step').eq(idx).addClass('active animated fadeInUp');
+        };
+      })(idx));
+    });
 
 });
