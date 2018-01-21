@@ -157,7 +157,10 @@ jQuery(document).ready(function() {
     new WOW().init();
 
 		// particles.js
-		window.particlesJS('particles-container', particlesConfig);
+    if($('#particles-container').length) {
+      window.particlesJS('particles-container', particlesConfig);
+    }
+
     // process in services
     $('.process-bar-step').each(function(idx, processStep) {
       $(processStep).on('click', (function(idx) {
