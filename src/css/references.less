@@ -88,6 +88,68 @@
   margin-right: auto;
 }
 
+.references-navigation-panel {
+  margin-top: 100px;
+
+  @media @mobile {
+    display: none;
+  }
+}
+
+.references-navigation-area {
+  display: flex;
+  justify-content: space-around;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  padding-left: 120px;
+}
+
+.references-navigation-wrapper {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  height:100%;
+}
+
+.references-navigation-wrapper:hover {
+  background: #4d85cd;
+  color: white;
+}
+
+.references-navigation-wrapper:hover img {
+  background: #4d85cd;
+  color: white;
+  opacity: 1;
+  filter: none;
+}
+
+.references-navigation-area a {
+  text-decoration: none;
+  color: black;
+}
+
+.references-navigation-image {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 50px;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.references-navigation-cropped-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.references-last {
+  border-right: none;
+}
+
 @font-face {
   font-family: 'BentonSans-Medium';
   src: url('./fonts/BentonSans-Medium.woff') format('woff'),
