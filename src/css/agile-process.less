@@ -1,0 +1,140 @@
+
+.process-box {
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  margin: 10px 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 10px;
+  height: 100%;
+  position: relative;
+}
+
+.process-grid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.process-title {
+  text-align: left;
+  font-weight: 400;
+}
+
+.process-description {
+  text-align: justify;
+}
+
+.row.equal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.equal > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+/****** Card 1 Figure Swing ***/
+
+.process-swing-area {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  justify-content: center;
+  // Absolute positioned div ignores parent padding-> padding added to absolute div
+  padding-right: 12px;
+  padding-bottom: 10px;
+
+  @media @mobile {
+    position: static;
+    bottom: auto;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.process-swing-area figure {
+  max-width: 25%;
+}
+
+.process-swing-area figcaption {
+  font-size: smaller;
+  line-height: normal;
+  margin-top: 2px;
+}
+
+.process-swing-area img {
+  border: 1px solid black;
+  max-height:120px;
+}
+
+/****** Card 2 Figure Sticky Notes***/
+
+.process-design-image {
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 150px;
+  width: 100%;
+}
+
+/****** Card 3 Figure User Stories ***/
+
+.process-story-area svg{
+  width: 10%;
+  max-height: 75px;
+}
+
+.process-story-area img{
+  max-height: 75px;
+  width: auto;
+}
+
+.process-story-area {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  justify-content: center;
+  // Absolute positioned div ignores parent padding-> padding added to absolute div
+  padding-right: 12px;
+  padding-bottom: 10px;
+
+  @media @mobile {
+    position: static;
+    bottom: auto;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.process-story-area figcaption {
+  font-size: smaller;
+  line-height: normal;
+  margin-top: 2px;
+}
+
+/****** Card 4 Figure Sprints ***/
+.process-sprint-area svg{
+  width: 10%;
+  max-height: 75px;
+}
+
+.process-sprint-area {
+  display: flex;
+  justify-content: center;
+}
+
+.process-sprint-area figcaption {
+  font-size: smaller;
+  line-height: normal;
+  margin-top: 2px;
+}
+
+.process-sprint-area figure {
+  min-width: 10%;
+}
+
+.process-sprint-area img {
+  max-height: 75px;
+  width: auto;
+}
