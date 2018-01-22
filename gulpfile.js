@@ -7,8 +7,7 @@ const gulpif = require('gulp-if');
 const less = require('gulp-less');
 const runSequence = require('run-sequence');
 
-//const templateData = require('./src/data/context.json');
-const templateData = {};
+const templateData = require('./src/data/context.json');
 
 gulp.task('build-html', function() {
   const options = {
