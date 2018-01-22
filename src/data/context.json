@@ -100,5 +100,32 @@
         "Satellite and drone imagery analytics"
       ]
     }
+  ],
+  "servicesOffer": [
+    {
+      "title": "Natural Language Processing",
+      "image": "./assets/img/folded-newspaper.png",
+      "description": "Verarbeitung und Generierung von Text- und Audioinhalten"
+    },
+    {
+      "title": "Computer Vision",
+      "image": "./assets/img/object_detection.png",
+      "description": "Computergestütztes Verstehen von Inhalten in Bildern und Videos"
+    },
+    {
+      "title": "Predictive Analytics",
+      "image": "./assets/img/predictive_analytics.png",
+      "description": "Analyse von vergangenen Daten, um zukünftige Entwicklungen vorherzusagen"
+    },
+    {
+      "title": "Data Analytics",
+      "image": "./assets/img/dashboard.png",
+      "description": "Visualisierung des aktuellen Zustand eines Unternehmens, um bessere Entscheidungen zu treffen"
+    },
+    {
+      "title": "Dateninfrastruktur",
+      "image": "",
+      "description": "Aufbau von Dateninfrastruktur"
+    }
   ]
 }
