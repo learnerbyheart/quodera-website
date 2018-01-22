@@ -1,0 +1,17 @@
+<div class="section-container application-areas-container">
+  <div class="container">
+    <h2>Anwendungsgebiete</h2>
+    <div class="application-areas">
+      {{#each servicesApplicationAreas}}
+        <div class="application-area segment">
+          <h3>{{title}}</h3>
+          <ul>
+            {{#each items}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

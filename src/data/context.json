@@ -43,5 +43,62 @@
         "Anpassung an neue Gegebenheiten"
       ]
     }
+  ],
+  "servicesApplicationAreas": [
+    {
+      "title": "Fertigung",
+      "items": [
+        "Visual quality control",
+        "Predictive maintenance",
+        "Demand forecasting",
+        "Early-warning systems"
+      ]
+    }, {
+      "title": "Gesundheitswesen",
+      "items": [
+        "Real-time medical diagnosis",
+        "Hospital readmission",
+        "Intelligent customer service",
+        "Designing treatment plans"
+      ]
+    }, {
+      "title": "Einzelhandel",
+      "items": [
+        "Churn prediction",
+        "Predicting customer lifetime value",
+        "Dynamic pricing",
+        "Product layout in stores",
+        "Product recommendation"
+      ]
+    }, {
+      "title": "Banken & Versicherungen",
+      "items": [
+        "Churn prediction",
+        "Predicting customer lifetime value",
+        "Fraud detection",
+        "Cross-selling / up-selling opportunities",
+        "Lead prioritization",
+        "Loan default prediction"
+      ]
+    }, {
+      "title": "Marketing & Werbung",
+      "items": [
+        "Logo detection and visibility analysis",
+        "Product recognition",
+        "Dynamic pricing",
+        "Marketing automation",
+        "Content generation and curation",
+        "Social listening"
+      ]
+    }, {
+      "title": "Öffentliche Sicherheit",
+      "items": [
+        "Predictive policing",
+        "Resource allocation",
+        "Traffic optimization",
+        "Vehicle automation",
+        "Satellite and drone imagery analytics"
+      ]
+    }
   ]
 }

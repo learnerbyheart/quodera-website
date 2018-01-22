@@ -1,0 +1,29 @@
+@area-margins: 10px;
+
+.application-areas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .application-area {
+    width: calc(~"50% -" @area-margins);
+    margin-top: @area-margins;
+    margin-bottom: @area-margins;
+    text-align: left;
+    &:nth-child(odd) {
+      margin-right: @area-margins;
+    }
+    &:nth-child(even) {
+      margin-left: @area-margins;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .application-areas{
+    .application-area {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
