@@ -1,0 +1,74 @@
+@logo_height: 20px;
+
+nav.navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1030;
+	background-color: white;
+	color: @text-color-primary;
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+	.navigation-header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		height: 50px;
+		.navigation-brand {
+			position: absolute;
+			left: 0;
+			top: calc(~"50% - " @logo_height / 2);
+			#logo {
+				height: @logo_height;
+				width: auto;
+				g {
+					fill: @color-primary;
+				}
+			}
+		}
+		.navigation-bar {
+			list-style: none;
+			display: flex;
+			margin: 0;
+			padding: 0;
+			li {
+				margin-right: 10px;
+				margin-left: 10px;
+				a {
+					color: @text-color-primary;
+				}
+			}
+		}
+		.navigation-call-to-action {
+			position: absolute;
+			right: 0;
+			a {
+				font-weight: 400;
+				color: @color-primary;
+			}
+		}
+	}
+	&.navigation-no-bg {
+		background: transparent;
+		box-shadow: none;
+	}
+	&.navigation-inverse {
+		color: white;
+		.navigation-header {
+			#logo g {
+				fill: @color-secondary;
+			}
+		}
+		.navigation-bar {
+			li a {
+				color: @text-color-primary-inverse;
+			}
+		}
+		.navigation-call-to-action {
+			a {
+				color: @color-secondary;
+			}
+		}
+	}
+}
