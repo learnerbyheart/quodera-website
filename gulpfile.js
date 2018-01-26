@@ -5,6 +5,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
 const less = require('gulp-less');
+const pump = require('pump');
+const autoprefixer = require('gulp-autoprefixer');
 const runSequence = require('run-sequence');
 
 const templateData = require('./src/data/context.json');
@@ -20,7 +22,7 @@ gulp.task('build-html', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build-js', function() {
+gulp.task('build-js', function(cb) {
   const srcFiles = [
     'src/js/libs/jquery-3.2.1.js',
     'src/js/libs/jquery-3.2.1.min.js',
@@ -30,19 +32,24 @@ gulp.task('build-js', function() {
   if(process.env.NODE_ENV !== 'production') {
     srcFiles.push('!src/js/libs/*.min.js')
   }
-  return gulp.src(srcFiles)
-    .pipe(concat('bundle.js'))
-    .pipe(gulpif(process.env.NODE_ENV === 'production', uglify()))
-    .pipe(gulp.dest('dist'))
+  pump([
+    gulp.src(srcFiles),
+    concat('bundle.js'),
+    gulpif(process.env.NODE_ENV === 'production', uglify()),
+    gulp.dest('dist')
+  ], cb);
 });
 
-gulp.task('compile-less', function() {
-  return gulp.src('src/css/styles.less')
-      .pipe(less())
-      .pipe(gulp.dest('src/css'));
+gulp.task('compile-less', function(cb) {
+  pump([
+    gulp.src('src/css/styles.less'),
+    less(),
+    autoprefixer(),
+    gulp.dest('src/css')
+  ], cb);
 });
 
-gulp.task('build-css', ['compile-less'], function() {
+gulp.task('build-css', ['compile-less'], function(cb) {
   const srcFiles = [
     'src/css/libs/bootstrap.min.css',
     'src/css/libs/*.css',
@@ -51,18 +58,24 @@ gulp.task('build-css', ['compile-less'], function() {
   if(process.env.NODE_ENV !== 'production') {
     srcFiles.push('!src/css/*.min.css')
   }
-  return gulp.src(srcFiles)
-    .pipe(concat('bundle.css'))
-    .pipe(gulpif(process.env.NODE_ENV === 'production', uglify()))
-    .pipe(gulp.dest('dist'))
+  pump([
+    gulp.src(srcFiles),
+    concat('bundle.css'),
+    gulpif(process.env.NODE_ENV === 'production', uglify()),
+    gulp.dest('dist')
+  ], cb);
 });
 
-gulp.task('build-assets', function() {
-  gulp.src('src/assets/**/*')
-    .pipe(gulp.dest('dist/assets/'));
+gulp.task('build-assets', function(cb) {
+  pump([
+    gulp.src('src/assets/**/*'),
+    gulp.dest('dist/assets/')
+  ]);
 
-  gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts/'));
+  pump([
+    gulp.src('src/fonts/**/*'),
+    gulp.dest('dist/fonts/')
+  ]);
 });
 
 gulp.task('watch', function() {
