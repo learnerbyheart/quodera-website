@@ -1,5 +1,10 @@
 @area-margins: 10px;
 
+.application-areas-container {
+  h2 {
+    font-weight: 400;
+  }
+}
 .application-areas {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +19,12 @@
     }
     &:nth-child(even) {
       margin-left: @area-margins;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    ul {
+      margin-bottom: 0;
     }
   }
 }
