@@ -133,12 +133,12 @@ jQuery(document).ready(function() {
 		scroll_to($(this), $('nav').outerHeight());
 	});
 	// toggle "navbar-no-bg" class
-	$('.top-content .text').waypoint({
+	/*$('.top-content .text').waypoint({
 		handler: function() {
-			$('nav').toggleClass('navbar-no-bg');
+			$('nav').toggleClass('navigation-no-bg navigation-inverse');
 		},
 		offset: "50px"
-	});
+	});*/
 
 	/*$('.top-content .icon').waypoint(function() {
 		$('nav .navbar-brand').toggleClass('navbar-no-icon');
@@ -157,9 +157,9 @@ jQuery(document).ready(function() {
     new WOW().init();
 
 		// particles.js
-    if($('#particles-container').length) {
+    /*if($('#particles-container').length) {
       window.particlesJS('particles-container', particlesConfig);
-    }
+    }*/
 
     // process in services
     $('.process-bar-step').each(function(idx, processStep) {
