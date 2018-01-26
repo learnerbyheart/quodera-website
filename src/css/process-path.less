@@ -23,6 +23,38 @@
  // filter: saturate(800%);
 }
 
+.marathon {
+  padding-left: 0;
+  width:300px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url("./assets/img/finish_line.jpg");
+  filter: grayscale(100%);
+}
+
+.football {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30pt !important;
+  font-weight: 400;
+    color: #fff;
+    background-color: #2d52cc;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+
+  padding-left: 10px;
+  padding-right: 10px;
+//  width:300px;
+//  height: 100px;
+//  background-repeat: no-repeat;
+//  background-position: bottom;
+//  background-size: cover;
+ // background-image: url("./assets/img/football.jpg");
+//  filter: grayscale(100%);
+}
+
 .img-road-straight {
   background-image: url("./assets/img/road_straight.jpg");
 }
@@ -33,5 +65,124 @@
 
 .img-road-parallel {
   background-image: url("./assets/img/road_parallel.jpg");
+}
+
+.row-pp {
+  display: flex;
+}
+
+.col-spacer {
+  min-height: 20px;
+}
+
+.sp-3 {
+  border-right: @border;
+}
+
+.sp-2 {
+  border-right: @border;
+}
+
+.sp-5 {
+  border-left: @border;
+}
+
+.sp-6 {
+
+}
+
+.sp-4 {
+  border-left: @border;
+}
+
+div [class*="pp-"] {
+  padding: 10px 10px;
+  font-size: 18pt;
+
+ // -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+ // box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.pp-img {
+  height: 75px;
+  width: auto;
+}
+
+@border: 2px solid #ddd;
+
+.pp-1 {
+  border-left: @border;
+  border-right: none;
+  border-top: @border;
+  border-bottom: @border;
+ // margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.pp-2 {
+  border-left: none;
+  border-right: none;
+  border-top: @border;
+  border-bottom: @border;
+ // margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.pp-3 {
+  border-left: none;
+  border-right: @border;
+  border-top: @border;
+  border-bottom: none;
+}
+
+.pp-4 {
+  border-left: @border;
+  border-right: none;
+  border-top: @border;
+  border-bottom: none;
+ // margin-top: 10px;
+}
+
+.pp-5 {
+  border-left: none;
+  border-right: none;
+  border-top: @border;
+  border-bottom: @border;
+//  margin-top: 10px;
+ // margin-bottom: 10px;
+}
+
+.pp-6 {
+  border-left: none;
+  border-right: @border;;
+  border-top: none;
+  border-bottom: @border;
+ // margin-bottom: 10px;
+}
+
+.pp-7 {
+  border-left: @border;
+  border-right: none;
+  border-top: none;
+  border-bottom: @border;
+
+}
+
+.pp-8 {
+  border-left: none;
+  border-right: none;
+  border-top: @border;
+  border-bottom: @border;
+//  margin-top: 10px;
+}
+
+.pp-9 {
+  border-left: none;
+  border-right: @border;
+  border-top: @border;
+  border-bottom: @border;
+//  margin-top: 10px;
 }
 

@@ -178,3 +178,47 @@ jQuery(document).ready(function() {
     });
 
 });
+
+var s = Snap("#svg-animation");
+
+var circles = [];
+
+var firstLayer = 5;
+var wSpace = 200;
+var hSpace = 150;
+var x = 100;
+var y = 150;
+
+function createCircles(x,y,n,wSpace,hSpace) {
+  if(n-1 >= 0) {
+    createCircles(x+wSpace, y+hSpace/2, n-1, wSpace, hSpace);
+  }
+  for(var i=1; i<= n; i++) {
+    circles.push(s.circle(x, y, 30).attr({fill: "#fff", stroke: "#ddd", strokeWidth: 1}));
+    y += hSpace;
+  }
+}
+
+createCircles(x,y,5,wSpace, hSpace);
+
+/*
+var c1 = s.circle(100, 200, 30).attr({fill: "#fff", stroke: "#ddd", strokeWidth: 1});
+var c2 = s.circle(100, 400, 30).attr({fill: "#fff"});
+var c3 = s.circle(100, 600, 30).attr({fill: "#fff"});
+
+var c4 = s.circle(500, 200, 30).attr({fill: "#fff"});
+var c5 = s.circle(500, 400, 30).attr({fill: "#fff"});
+*/
+var p14 = s.path({path:'M100 100 L300 200',fill: "none", stroke: '#fff', strokeWidth: 7});
+var p15 = s.path({path:'M100 100 L300 400',fill: "none", stroke: '#fff'});
+var p24 = s.path({path:'M100 300 L300 200',fill: "none", stroke: '#fff'});
+var p25 = s.path({path:'M100 300 L300 400',fill: "none", stroke: '#fff'});
+var p34 = s.path({path:'M100 500 L300 200',fill: "none", stroke: '#fff'});
+var p35 = s.path({path:'M100 500 L300 400',fill: "none", stroke: '#fff'});
+
+var cc1 = s.circle(100, 100, 10).attr({fill: "#fff"});
+
+cc1.animate({ transform: 't200 100' }, 15000);
+
+
+
