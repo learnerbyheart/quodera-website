@@ -179,6 +179,7 @@ jQuery(document).ready(function() {
 
 });
 
+/*
 const s = Snap("#svg-animation");
 
 const layers = [4,3,4,3,4,3]
@@ -285,7 +286,7 @@ function spawnForm(layer, node) {
 for(let i=0; i < layers.length; i++){
   spawned[i] = 0;
 }
-/*
+
 for(let i=0; i < layers[0]; i++) {
   spawnForm(0,i);
 }
