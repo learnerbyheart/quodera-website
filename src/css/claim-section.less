@@ -1,9 +1,8 @@
 /***** Top content *****/
 
 .top-content {
-  //.background()
-  //min-height: 100vh;
-  margin-top: 100px;
+  .background();
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,12 +10,31 @@
   .text {
     display: flex;
   	color: @text-color-primary;
-    font-weight: 700;
     h1 {
       line-height: 140%;
+      font-weight: 300;
+      opacity: 0.9;
       color: @text-color-primary;
       .underline {
         color: @color-primary;
+      }
+    }
+  }
+
+  &.inverse {
+    .text {
+      color: @text-color-primary-inverse;
+    }
+    h1 {
+      color: @text-color-primary-inverse;
+      .underline {
+        color: @color-secondary;
+      }
+    }
+    .next-section-arrow {
+      color: @text-color-primary-inverse;
+      &:hover, &:focus {
+        color: @text-color-primary-inverse;
       }
     }
   }

@@ -1,4 +1,4 @@
-@color-primary: #F4511E;
+@color-primary: #1565C0;
 @color-secondary: white;
 
 @text-color-primary: rgba(0,0,0,0.87);
@@ -13,8 +13,9 @@
 
 .background() {
   background: #4d85cd;
-  background: -moz-linear-gradient(-45deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
-  background: -webkit-linear-gradient(-45deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
-  background: linear-gradient(135deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d85cd', endColorstr='#2d52cc',GradientType=1 );
+  //background: -moz-linear-gradient(-45deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
+  //background: -webkit-linear-gradient(-45deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
+  //background: linear-gradient(135deg, #4d85cd 0%, #2d52cc 64%, #2d52cc 100%);
+  background: linear-gradient(135deg, @color-primary 0%, darken(@color-primary, 10%) 64%, darken(@color-primary, 15%) 100%);
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d85cd', endColorstr='#2d52cc',GradientType=1 );
 }
