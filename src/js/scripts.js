@@ -178,3 +178,128 @@ jQuery(document).ready(function() {
     });
 
 });
+
+/*
+const s = Snap("#svg-animation");
+
+const layers = [4,3,4,3,4,3]
+const x = 50;
+const y = 120;
+const wSpace = 190;
+const hSpace = 110;
+let circles = [];
+let circleCoords = [];
+let paths = [];
+
+// Iterate layers
+for(let layer = 0; layer < layers.length; layer++) {
+  let nrNodes = layers[layer];
+  circles[layer] = [];
+  circleCoords[layer] = [];
+  // Iterate nodes in current layer
+  for(let node = 0; node < nrNodes; node++) {
+    let curX = x + layer*wSpace;
+    let curY = y + (Math.max.apply(Math, layers)-nrNodes)*hSpace/2 + node*hSpace;
+    circleCoords[layer].push({x: curX, y: curY});
+    // Add a circle for each node
+    circles[layer].push(s.circle(curX, curY, 10).attr({
+      fill: "#fff",
+      fillOpacity: 0.2,
+      stroke: "#ddd",
+      strokeOpacity: 0.3,
+      strokeWidth: 1
+    }));
+    // Is this not the last layer?
+    if (layer < layers.length) {
+      // Add paths to all subsequent nodes
+      for (let j = 0; j < layers[layer + 1]; j++) {
+//        debugger;
+        paths.push(s.path({
+          path: 'M' + curX + ' ' + curY + 'L' + (curX + wSpace) + ' ' + (y + (Math.max.apply(Math, layers)-layers[layer+1])*hSpace/2 + j*hSpace),
+          fill: "none",
+          stroke: '#fff',
+          strokeOpacity: 0.2,
+          strokeWidth: 1
+        }));
+      }
+    }
+  }
+}
+
+let spawned = [];
+let promises = [];
+
+for (let i = 0; i < layers.length; i++) {
+  promises[i] = [];
+}
+
+function spawnForm(layer, node) {
+
+  let targetNodes = circleCoords[layer + 1] ? circleCoords[layer + 1].length : 0;
+
+  for (let target in circleCoords[layer + 1]) {
+    const el = s.circle(circleCoords[layer][node].x, circleCoords[layer][node].y, 3).attr({
+      fill: "#fff",
+      fillOpacity: 0.5,
+      stroke: "#ddd",
+      strokeOpacity: 0.3,
+      strokeWidth: 1
+    });
+
+    const diffX = circleCoords[layer + 1][target].x - circleCoords[layer][node].x;
+    const diffY = circleCoords[layer + 1][target].y - circleCoords[layer][node].y;
+    const time = Math.floor((Math.random() * 20000) + 15000);
+    const promise = new Promise((resolve, reject) => {
+      el.animate({transform: 't' + diffX + ' ' + diffY}, time, () => {
+        resolve(el);
+      });
+    });
+
+    promises[target].push(promise);
+  }
+
+  spawned[layer] = spawned[layer]+1;
+  if(spawned[layer] === layers[layer]) {
+    spawned[layer] = 0;
+    for(let targetNode = 0; targetNode < targetNodes; targetNode++) {
+      Promise.all(promises[targetNode])
+        .then(res => {
+          for(let el in res) {
+            res[el].remove();
+          }
+          if (layer < layers.length) {
+            spawnForm(layer + 1, targetNode);
+            circles[layer+1][targetNode].animate({r: 25}, 1000, () => {
+              circles[layer+1][targetNode].animate({r: 20}, 1000);
+            });
+            console.log("Spawned: "+(layer+1)+ " "+targetNode);
+          }
+          promises[targetNode] = [];
+        }, err => {
+
+        });
+    }
+  }
+
+}
+
+for(let i=0; i < layers.length; i++){
+  spawned[i] = 0;
+}
+
+for(let i=0; i < layers[0]; i++) {
+  spawnForm(0,i);
+}
+for(let i=0; i < layers[3]; i++) {
+  spawnForm(3,i);
+}
+
+setInterval(() => {
+  for(let i=0; i < layers[0]; i++) {
+    spawnForm(0,i);
+  }
+}, 30000);
+
+*/
+
+
