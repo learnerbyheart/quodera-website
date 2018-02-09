@@ -1,16 +1,16 @@
 <!-- Top menu -->
-<nav class="navigation" role="navigation">
+<nav class="navigation {{#if inverse}}navigation-inverse{{/if}} {{#if nobg}}navigation-no-bg{{/if}}" role="navigation">
     <div class="container">
       <div class="navigation-header">
         <a class="navigation-brand" href="index.html">
             {{> logo_quodera height="40" width="182.703100125"}}
         </a>
         <ul class="navigation-bar">
-            <li><a href="services.html">Leistungen</a></li>
-            <li><a href="approach.html">Vorgehensweise</a></li>
-            <li><a href="references.html">Referenzen</a></li>
-            <li><a target="_blank" href="https://medium.com/quodera">Blog</a></li>
-            <li><a class="scroll-link" href="#about-us">Team</a></li>
+            <li class="{{#if services}}active{{/if}}"><a href="services.html">Leistungen</a><div class="active-bar"></div></li>
+            <li class="{{#if approach}}active{{/if}}"><a href="approach.html">Vorgehensweise</a><div class="active-bar"></div></li>
+            <li class="{{#if references}}active{{/if}}"><a href="references.html">Referenzen</a><div class="active-bar"></div></li>
+            <li><a target="_blank" href="https://medium.com/quodera">Blog</a><div class="active-bar"></div></li>
+            <li class="{{#if team}}active{{/if}}"><a class="scroll-link" href="#about-us">Team</a><div class="active-bar"></div></li>
         </ul>
         <div class="navigation-call-to-action">
           <a class="scroll-link" href="#contacts">Packen wir es an</a>
