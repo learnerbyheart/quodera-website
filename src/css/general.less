@@ -220,17 +220,34 @@ img { max-width: 100%; }
 @notmobile: ~"only screen and (min-width: 767px)";
 
 .welcome-section {
-  padding-top: 150px;
+  padding-top: 160px;
   padding-bottom: 100px;
-  background: #efefef;
+  @media @mobile {
+    & {
+      padding-top: 100px;
+      padding-bottom: 30px;
+    }
+  }
   h2 {
-    font-weight: 400;
-    //color: @text-color-primary-inverse;
+    font-weight: bold;
+    color: @color-primary;
+    @media @mobile {
+      & {
+        text-align: left;
+      }
+    }
   }
   h3 {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 30px;
-    //color: @text-color-secondary-inverse;
+    color: @text-color-secondary;
+    @media @mobile {
+      & {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
   }
 }
