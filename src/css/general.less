@@ -19,6 +19,10 @@ body {
 
 strong { font-weight: 500; }
 
+p {
+  color: @text-color-secondary;
+}
+
 h1 {
 	margin-top: 10px;
 	font-size: 48px;
@@ -80,7 +84,7 @@ img { max-width: 100%; }
 }
 
 .section-description p {
-    margin-top: 20px;
+  margin-top: 20px;
 	padding: 0 120px;
 }
 .section-container-image-bg .section-description p {
@@ -150,9 +154,7 @@ img { max-width: 100%; }
   position: relative;
   text-decoration: none;
   display: inline-block;
-  padding: 0 1px;
   transition: color ease 0.3s;
-  line-height: 130%;
 
   &.underline-inverse {
     &::after {
@@ -167,7 +169,7 @@ img { max-width: 100%; }
     width: 100%;
     height: 5%;
     left: 0;
-    bottom: 0;
+    bottom: -8px;
     background-color: @color-primary;
   }
 
@@ -190,3 +192,19 @@ img { max-width: 100%; }
 
 /***** Media Query Defnitions *****/
 @mobile: ~"only screen and (max-width: 767px)";
+
+.welcome-section {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background: #efefef;
+  h2 {
+    font-weight: 400;
+    //color: @text-color-primary-inverse;
+  }
+  h3 {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    //color: @text-color-secondary-inverse;
+  }
+}
