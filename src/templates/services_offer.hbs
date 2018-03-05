@@ -1,31 +1,32 @@
 <!-- Features -->
 <div class="section-container services-offer">
   <div class="container">
-    <div class="col-sm-6">
-      <h2>
-        Data.<br />
-        Intelligence.<br />
-        Quodera.
-</h2>
-      <div>
-        <p>
-          Unser Leistungsangebot ist vielseitig. Wir können Ihnen helfen den Inhalt von Texten zu verstehen, Objekte in Bildern zu erkennen oder Vorhersagen zu treffen.
-        </p>
-        <p>
-          Dazu nutzen wir bewährte Verfahren und neueste Forschungsergebnisse. Bei der Technologieauswahl sind wir flexibel und können unsere Lösungen an bestehende Systeme anpassen.
-        </p>
-        <p>
-          Gerne unterstützen wie Sie beim Aufbau eigener Infrastruktur für die Verarbeitung großer Datenmengen - lokal oder in einer skalierbaren Cloud-Lösung.
-        </p>
-        <p>
-          Wie wird künstliche Intelligenz Ihr Unternehmen verändern? Lassen Sie uns darüber reden!
-        </p>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>
+          Data.<br />
+          Intelligence.<br />
+          Quodera.
+        </h2>
+        <div>
+          <p>
+            Unser Leistungsangebot ist vielseitig. Wir können Ihnen helfen den Inhalt von Texten zu verstehen, Objekte in Bildern zu erkennen oder Vorhersagen zu treffen.
+          </p>
+          <p>
+            Dazu nutzen wir bewährte Verfahren und neueste Forschungsergebnisse. Bei der Technologieauswahl sind wir flexibel und können unsere Lösungen an bestehende Systeme anpassen.
+          </p>
+          <p>
+            Gerne unterstützen wie Sie beim Aufbau eigener Infrastruktur für die Verarbeitung großer Datenmengen - lokal oder in einer skalierbaren Cloud-Lösung.
+          </p>
+          <p>
+            Wie wird künstliche Intelligenz Ihr Unternehmen verändern? Lassen Sie uns darüber reden!
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="col-sm-6">
-      <div class="offer-list">
-        {{#each servicesOffer}}
+      <div class="col-sm-6">
+        <div class="offer-list">
+          {{#each servicesOffer}}
           <div class="offer-list-item">
             <div>
               <h3>{{title}}</h3>
@@ -35,8 +36,10 @@
           {{#unless @last}}
           <div class="divider"></div>
           {{/unless}}
-        {{/each}}
+          {{/each}}
+        </div>
       </div>
+
     </div>
   </div>
 </div>
