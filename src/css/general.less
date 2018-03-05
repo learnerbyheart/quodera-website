@@ -129,6 +129,20 @@ img { max-width: 100%; }
   background-color: #3ECF8E;
   border-color: #3ECF8E;
 }
+.btn.btn-outline-primary {
+  color: @color-primary;
+  border-color: @color-primary;
+  &:not(.disabled):not(:disabled){
+    &:hover, &:focus, &:active {
+      background: @color-primary;
+      border-color: @color-primary;
+      color: @text-color-primary-inverse;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(21,101,192,.5);
+    }
+  }
+}
 
 .segment {
   position: relative;
