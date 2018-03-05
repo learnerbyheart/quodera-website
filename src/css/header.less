@@ -1,6 +1,12 @@
+@navigationHeight: 60px;
 @logo_height: 20px;
+@dashOffsetCross: 0;
+@crossLength: 950px;
+@easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+@easeOutBack: cubic-bezier(0.250,-0.250, 0.750, 1.250);
+@easing: @easeOutBack;
 
-nav.navigation {
+.navigation {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9,24 +15,99 @@ nav.navigation {
 	background-color: white;
 	color: @text-color-primary;
 	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+	@media (max-width: 767px) {
+		&.open {
+			min-height: 100vh;
+		}
+	}
+
 	.navigation-header {
+		height: @navigationHeight;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		height: 50px;
+
+		@media (max-width: 767px) {
+			& {
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+			.open& {
+				height: 100%;
+			}
+		}
+
 		.navigation-brand {
+			@media (max-width: 767px) {
+				& {
+					margin-top: 20px;
+					position: initial;
+				}
+			}
 			position: absolute;
 			left: 0;
 			top: calc(~"50% - " @logo_height / 2);
+			line-height: 0;
+
 			#logo {
 				height: @logo_height;
 				width: auto;
+
 				g {
 					fill: @color-primary;
 				}
 			}
 		}
+
+		.navigation-toggle {
+			@media (min-width: 767px) {
+				& {
+					display: none !important;
+				}
+			}
+			line-height: 0;
+			position: absolute;
+			right: 0;
+
+			svg {
+				height: @navigationHeight;
+				cursor: pointer;
+				transform: translate3d(0,0,0);
+
+				path {
+					fill: none;
+					transition: stroke-dashoffset 0.5s @easing, stroke-dasharray 0.5s @easing;
+					stroke-width: 40px;
+					stroke-linecap: round;
+					stroke: @color-primary;
+					stroke-dashoffset: 0;
+
+					&#bottom,
+					&#top {
+						stroke-dasharray: 240px @crossLength;
+					}
+
+					&#middle {
+						stroke-dasharray: 240px 240px;
+					}
+					.open& {
+						&#bottom,
+						&#top {
+							stroke-dashoffset: -650px;
+							stroke-dashoffset: -650px;
+						}
+
+						&#middle {
+							stroke-dashoffset: -115px;
+							stroke-dasharray: 1px 220px;
+						}
+					}
+				}
+			}
+		}
+
 		.navigation-bar {
 			list-style: none;
 			display: flex;
@@ -34,6 +115,17 @@ nav.navigation {
 			height: 100%;
 			margin: 0;
 			padding: 0;
+
+			@media (max-width: 767px) {
+				:not(.open)& {
+					display: none !important;
+				}
+				.open& {
+					flex-direction: column;
+					margin-top: 30px;
+				}
+			}
+
 			li {
 				height: 100%;
 				padding: 0 5px;
@@ -43,33 +135,58 @@ nav.navigation {
 				position: relative;
 				margin-right: 10px;
 				margin-left: 10px;
+
+				@media (max-width: 767px) {
+					.open& {
+						margin-top: 30px;
+						padding-top: 10px;
+						padding-bottom: 10px;
+						font-size: 25px;
+					}
+				}
+
 				a {
 					text-decoration: none;
 					color: @text-color-secondary;
+
 					&.active {
 						color: @text-color-primary;
 						font-weight: 400;
 					}
+
 					&:hover {
 						color: @text-color-primary;
 					}
 				}
+
 				.active-bar {
 					position: absolute;
 					top: 0;
 					height: 4px;
-					width: 0%;
+					width: 0;
 					transition: width 0.5s;
+
+					@media (max-width: 767px) {
+						.open& {
+							bottom: 0;
+							top: initial;
+							height: 2px;
+						}
+					}
 				}
-				&.active, &:hover {
+
+				&.active,
+				&:hover {
 					a {
 						color: @text-color-primary;
 					}
+
 					.active-bar {
 						width: 100%;
 						background: @color-primary;
 					}
 				}
+
 				&:hover {
 					.active-bar {
 						background: #c1c1c1;
@@ -77,31 +194,65 @@ nav.navigation {
 				}
 			}
 		}
+
 		.navigation-call-to-action {
 			position: absolute;
 			right: 0;
-			a {
-				font-weight: 400;
-				color: @color-primary;
+
+			@media (max-width: 767px) {
+				:not(.open)& {
+					display: none !important;
+				}
+			}
+
+			@media (max-width: 767px) {
+				.open& {
+					margin-top: 30px;
+					position: initial;
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+
+			.btn-action {
+				@media (max-width: 767px) {
+					.open& {
+						font-size: 20px;
+						font-weight: normal;
+					}
+				}
+				background: @color-primary;
+				color: @text-color-primary-inverse;
+				font-weight: bold;
+				cursor: pointer;
 			}
 		}
 	}
+
 	&.navigation-no-bg {
 		background: transparent;
 		box-shadow: none;
 	}
+
 	&.navigation-inverse {
 		color: white;
-		.navigation-header {
+
+		.navigation-header {
 			#logo g {
 				fill: @color-secondary;
 			}
-		}
-		.navigation-bar {
-			li a {
-				color: @text-color-secondary-inverse;
+
+			.navigation-bar {
+				li a {
+					color: @text-color-secondary-inverse;
+
+					&:hover {
+						color: @text-color-primary-inverse;
+					}
+				}
 			}
 		}
+
 		.navigation-call-to-action {
 			a {
 				color: @color-secondary;
