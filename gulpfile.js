@@ -6,6 +6,7 @@ const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
 const less = require('gulp-less');
 const pump = require('pump');
+const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
 const runSequence = require('run-sequence');
 
@@ -14,7 +15,7 @@ const templateData = require('./src/data/context.json');
 gulp.task('build-html', function() {
   const options = {
     // partials (reusable files - are referenced like {{> header}})
-    batch: ['./src/templates/']
+    batch: ['./src/templates/', './src/templates/icons/']
   }
 
   return gulp.src('src/*.html')
@@ -76,11 +77,21 @@ gulp.task('build-assets', function(cb) {
     gulp.src('src/fonts/**/*'),
     gulp.dest('dist/fonts/')
   ]);
+
+  // copy svg icons into handlebars templates so that they can be imported
+  pump([
+    gulp.src('src/icons/**/*.svg'),
+    rename({
+      prefix: 'icon-',
+      extname: ".hbs"
+    }),
+    gulp.dest('src/templates/icons/')
+  ]);
 });
 
 gulp.task('watch', function() {
   runSequence(['build-html', 'build-js', 'build-css', 'build-assets']);
-  watch(['src/*.html', 'src/templates/*.hbs'], function() {
+  watch(['src/*.html', 'src/templates/**/*.hbs'], function() {
     runSequence('build-html');
   });
   watch('src/js/*.js', function() {
@@ -89,7 +100,7 @@ gulp.task('watch', function() {
   watch(['src/css/libs/*.css', 'src/css/*.less'], function() {
     runSequence('build-css');
   });
-  watch('src/assets/**/*', function() {
+  watch(['src/assets/**/*', 'src/icons/**/*'], function() {
     runSequence('build-assets');
   });
 });
