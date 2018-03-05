@@ -204,8 +204,20 @@ img { max-width: 100%; }
   color: @color-primary;
 }
 
+.learn-more {
+  margin-top: 20px;
+  min-width: 600px;
+  @media @mobile {
+    & {
+      min-width: initial;
+      width: 100%;
+    }
+  }
+}
+
 /***** Media Query Defnitions *****/
 @mobile: ~"only screen and (max-width: 767px)";
+@notmobile: ~"only screen and (min-width: 767px)";
 
 .welcome-section {
   padding-top: 150px;
