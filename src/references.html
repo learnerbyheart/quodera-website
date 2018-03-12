@@ -3,129 +3,56 @@
 
 <head>
 
-    {{> head}}
+  {{> head}}
 </head>
 
 <body>
 
-    <!-- Top menu -->
-    {{> header references="true"}}
+  <!-- Top menu -->
+  {{> header references="true"}}
 
   <!-- Welcome Statement -->
+  {{> welcome-references}}
 
-
-    </div>
-
-      <!-- Reference -->
-      <div class="component two-col padding-top-small">
-        <div class="container text-center-small">
-          <div class="row margin-vertical-medium" >
-            <div class="col-sm-5 margin-bottom-small">
-              <img class="references-overview-image" src="assets/img/kuka.png">
-            </div>
-            <div class="col-sm-7">
-
-              <h3 class="references-h3">Maschinenausfälle erkennen, bevor sie passieren.</h3>
-
-              <p class="margin-top-small references-overview-description">
-                Wie Quodera hilft, Ausfälle von Schweißrobotern mit Sensordaten vorherzusagen.
-              </p>
-
-              <div class="margin-top-medium">
-                <a class="btn margin-right-small" href="reference_predictive_maintenance.html">Mehr erfahren</a>
-                <a class="btn margin-right-small" href="#link">Demo</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
+  <!-- Reference -->
+  <div class="container section-container">
+    <div class="references">
+      {{> reference
+        file="kuka.png"
+        linkMore="reference_predictive_maintenance.html"
+        title="Maschinenausfälle erkennen, bevor sie passieren."
+        description="Wie Quodera hilft, Ausfälle von Schweißrobotern mit Sensordaten vorherzusagen."
+      }}
       {{> horizontal-divider}}
+      {{> reference
+        file="complex_tree.png"
+        pictureRight="true"
+        linkMore="reference_it_architecture_complexity.html"
+        title="Komplexität in IT-Architektur verstehen."
+        description="Wie Quodera Engpässe in einer heterogenen Systemlandschaft identifiziert."
+      }}
+      {{> horizontal-divider}}
+      {{> reference
+        file="conversation.png"
+        linkMore="reference_company_poll.html"
+        title="Wissen, was die Kollegen denken."
+        description="Wie Quodera mit einer Multi-Plattform-App Umfragen im Unternehmen ermöglicht."
+      }}
+      {{> horizontal-divider}}
+      {{> reference
+        file="needle_hay.jpg"
+        pictureRight="true"
+        linkMore="reference_knowledge_discovery.html"
+        title="Informationen in großen Datenmengen finden."
+        description="Wie Quodera aus 500.000 E-Mails einen Informationsexplorer baut."
+      }}
+    </div>
+  </div>
 
-        <!-- Reference -->
-        <div class="component two-col padding-top-small">
-          <div class="container text-center-small">
-            <div class="row margin-vertical-medium" >
+  {{> contacts}}
 
-              <div class="col-sm-7">
-
-                <h3 class="references-h3">Komplexität in IT-Architektur verstehen.</h3>
-
-                <p class="margin-top-small references-overview-description">
-                  Wie Quodera Engpässe in einer heterogenen Systemlandschaft identifiziert.
-                </p>
-
-                <div class="margin-top-medium">
-                  <a class="btn margin-right-small" href="reference_it_architecture_complexity.html">Mehr erfahren</a>
-                  <a class="btn margin-right-small" href="#link">Demo</a>
-                </div>
-
-              </div>
-              <div class="col-sm-5 margin-bottom-small">
-                <img class="references-overview-image" src="assets/img/complex_tree.png">
-              </div>
-            </div>
-          </div>
-
-          {{> horizontal-divider}}
-
-          <!-- Reference -->
-          <div class="component two-col padding-top-small">
-            <div class="container text-center-small">
-              <div class="row margin-vertical-medium" >
-                <div class="col-sm-5 margin-bottom-small">
-                  <img class="references-overview-image" src="assets/img/conversation.png">
-                </div>
-                <div class="col-sm-7">
-
-                  <h3 class="references-h3">Wissen, was die Kollegen denken.</h3>
-
-                  <p class="margin-top-small references-overview-description">
-                    Wie Quodera mit einer Multi-Plattform-App Umfragen im Unternehmen ermöglicht.
-                  </p>
-
-                  <div class="margin-top-medium">
-                    <a class="btn margin-right-small" href="reference_company_poll.html">Mehr erfahren</a>
-                    <a class="btn margin-right-small" href="#link">Demo</a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            {{> horizontal-divider}}
-
-            <!-- Reference -->
-            <div class="component two-col padding-top-small">
-              <div class="container text-center-small">
-                <div class="row margin-vertical-medium" >
-
-                  <div class="col-sm-7">
-
-                    <h3 class="references-h3">Informationen in großen Datenmengen finden.</h3>
-
-                    <p class="margin-top-small references-overview-description">
-                      Wie Quodera aus 500.000 E-Mails einen Informationsexplorer baut.
-                    </p>
-
-                    <div class="margin-top-medium">
-                      <a class="btn margin-right-small" href="reference_knowledge_discovery.html">Mehr erfahren</a>
-                      <a class="btn margin-right-small" href="#link">Demo</a>
-                    </div>
-
-                  </div>
-                  <div class="col-sm-5 margin-bottom-small">
-                    <div class="references-overview-image-cropper">
-                      <img class="references-overview-cropped-image" src="assets/img/needle_hay.jpg">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-    {{> contacts}}
-
-    <!-- Javascript -->
-    <script src="bundle.js"></script>
+  <!-- Javascript -->
+  <script src="bundle.js"></script>
 
 </body>
 

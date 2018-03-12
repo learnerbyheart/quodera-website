@@ -1,10 +1,40 @@
 /***** References *****/
 
-.references-h3 {
-  text-transform: none;
-  line-height: normal;
-  font-family: BentonSans-Medium;
-  font-size: 45px;
+.references {
+  .reference {
+    .references-overview-image {
+      margin-left: auto;
+      margin-right: auto;
+      height: 200px;
+    }
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .reference-information {
+      text-align: left;
+      @media @mobile {
+        & {
+          margin-top: 20px;
+        }
+      }
+      .reference-title {
+        font-size: 30px;
+        font-weight: 400;
+      }
+      .reference-overview-description {
+        color: @text-color-secondary;
+        font-size: 20px;
+      }
+      .links {
+        &>a:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 }
 
 .references-overview-image-cropper {
@@ -35,7 +65,6 @@
 }
 
 .references-overview-description {
-  font-family: BentonSans-Medium;
   font-size: 20px;
 }
 
@@ -55,7 +84,6 @@
 }
 
 .references-detail-description {
-  font-family: BentonSans-Medium;
   font-size: 15px;
   text-align: justify;
 }
@@ -148,12 +176,4 @@
 
 .references-last {
   border-right: none;
-}
-
-@font-face {
-  font-family: 'BentonSans-Medium';
-  src: url('./fonts/BentonSans-Medium.woff') format('woff'),
-  url('./fonts/BentonSans-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
