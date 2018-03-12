@@ -3,6 +3,7 @@
     {
       "title": "Am Anfang steht die Idee",
       "image": "./assets/img/idea.png",
+      "icon": "icon-idea",
       "items": [
         "Haben Sie schon eine Idee was Sie mit KI machen wollen? Dann sind Sie bei uns genau richtig!",
         "Sie haben noch keine konkrete Idee, wie Sie KI einsetzen wollen? Dann können wir Sie gerne beraten"
@@ -10,6 +11,7 @@
     }, {
       "title": "Kann KI dieses Problem lösen?",
       "image": "./assets/img/zoom-tool.png",
+      "icon": "icon-research",
       "items": [
         "Welche Chancen und Risiken bestehen?",
         "Wie lässt sich der Erfolg der Lösung messen?",
@@ -18,6 +20,7 @@
     }, {
       "title": "Wir entwickeln einen KI Prototypen",
       "image": "./assets/img/cube.png",
+      "icon": "icon-cube",
       "items": [
         "Sammeln und Verarbeiten der benötigten Daten",
         "Auswahl der besten KI Methoden",
@@ -28,6 +31,7 @@
     }, {
       "title": "Wir setzen die KI Lösung ein",
       "image": "./assets/img/computer.png",
+      "icon": "icon-coding",
       "items": [
         "Entwickeln einer Softwarelösung",
         "Integration des KI Modells in ein bestehendes System",
@@ -37,6 +41,7 @@
     }, {
       "title": "Wir warten Ihre KI Lösung",
       "image": "./assets/img/settings.png",
+      "icon": "icon-settings",
       "items": [
         "Kontinuierliches Überwachen der KI Lösung",
         "Anpassung an neue Gegebenheiten"

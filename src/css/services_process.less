@@ -3,9 +3,14 @@
   .services-content {
     display: flex;
     align-items: center;
-    img {
+    svg {
       height: 100px;
       align-self: flex-start;
+      @media @mobile {
+        & {
+          display: none;
+        }
+      }
     }
   }
   &:not(.active) {
@@ -49,6 +54,20 @@
       padding-top: 15px;
       &:hover {
         cursor: pointer;
+      }
+      &.icon-label {
+        display: none;
+      }
+      @media @mobile {
+        &.text-label {
+          display: none;
+        }
+        &.icon-label {
+          display: block;
+          svg {
+            width: 35px;
+          }
+        }
       }
     }
     &:hover {

@@ -7,23 +7,28 @@
       <div class="process-bar">
         <div class="active process-bar-step">
           <div class="circle">1</div>
-          <label>Idee</label>
+          <label class="text-label">Idee</label>
+          <label class="icon-label">{{> icon-idea}}</label>
         </div>
         <div class="process-bar-step">
           <div class="circle">2</div>
-          <label>Machbarkeit</label>
+          <label class="text-label">Machbarkeit</label>
+          <label class="icon-label">{{> icon-research}}</label>
         </div>
         <div class="process-bar-step">
           <div class="circle">3</div>
-          <label>Prototyp</label>
+          <label class="text-label">Prototyp</label>
+          <label class="icon-label">{{> icon-cube}}</label>
         </div>
         <div class="process-bar-step">
           <div class="circle">4</div>
-          <label>Einsatz</label>
+          <label class="text-label">Einsatz</label>
+          <label class="icon-label">{{> icon-coding}}</label>
         </div>
         <div class="process-bar-step">
           <div class="circle">5</div>
-          <label>Wartung</label>
+          <label class="text-label">Wartung</label>
+          <label class="icon-label">{{> icon-settings}}</label>
         </div>
         <div class="base-bar"></div>
         <div class="active-bar"></div>
@@ -34,7 +39,7 @@
         <div class="{{#if @first}}active {{/if}}process-step segment">
           <h3>{{title}}</h3>
           <div class="services-content">
-            <img src="{{image}}" />
+            {{> (lookup . 'icon')}}
             <ul>
               {{#each items}}
               <li>{{this}}</li>
