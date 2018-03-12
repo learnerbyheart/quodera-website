@@ -44,6 +44,10 @@ h3 {
 
 img { max-width: 100%; }
 
+a {
+  color: lighten(@color-primary, 10%);
+}
+
 .medium-paragraph {
 	font-size: 18px;
 	line-height: 32px;
@@ -60,6 +64,11 @@ img { max-width: 100%; }
 .section-container {
     margin: 0 auto;
     padding-bottom: 80px;
+    @media @mobile {
+      & {
+        padding-bottom: 40px;
+      }
+    }
 }
 
 .section-container-gray-bg {
