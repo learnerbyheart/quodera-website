@@ -1,42 +1,56 @@
 /***** Contacts *****/
 .contacts-container {
-  .background();
+  //.background();
   font-weight: 200;
-  color: white;
-  box-shadow: inset 0 3px 9px -3px rgba(0,0,0,0.7);
+  //color: white;
+  box-shadow: inset 0 3px 9px -3px rgb(234, 232, 232);
   padding-top: 40px;
   position: relative;
+  background: rgb(248, 248, 248);
 
   .contacts-mail {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 60px;
+    a {
+      font-weight: 300;
+      color: @color-primary;
+      display: inline-block;
+    }
   }
 
   .social {
     margin-top: 80px;
     font-size: 30px;
-
     a {
+      color: @color-primary;
       margin: 0 15px;
     }
   }
 
   .impressum {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    a {
+      color: @text-color-primary;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .call-to-action {
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom: 40px;
+    color: @color-primary;
+    font-weight: 500;
   }
 
   a {
     text-decoration: none;
-    color: white;
+    //color: white;
     &:hover, &:focus {
       text-decoration: none;
-      color: white;
+      //color: white;
     }
   }
 }
