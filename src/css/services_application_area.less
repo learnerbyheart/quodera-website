@@ -1,10 +1,5 @@
 @area-margins: 10px;
 
-.application-areas-container {
-  h2 {
-    font-weight: 400;
-  }
-}
 .application-areas {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +9,7 @@
     margin-top: @area-margins;
     margin-bottom: @area-margins;
     text-align: left;
+    background: #f8f8f8;
     &:nth-child(odd) {
       margin-right: @area-margins;
     }
@@ -25,6 +21,7 @@
     }
     ul {
       margin-bottom: 0;
+      color: @text-color-secondary;
     }
   }
 }
