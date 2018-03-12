@@ -8,41 +8,24 @@
 
 <body>
 
-<!-- Top menu -->
-{{> header}}
+  <!-- Top menu -->
+  {{> header}}
 
-<!-- Required because otherwise content is below the header -->
-<div class="references-top-spacer" />
-
-<!-- Reference -->
-<div class="component two-col padding-top-small">
-  <div class="container text-center-small">
-    <div class="references-detail-header">
-    <h3 class="references-h3">Informationen in großen Datenmengen finden.</h3>
+  {{#> references-detail
+    title="Informationen in großen Datenmengen finden."
+    description="Die Bilanzfälschungen des US-amerikanischen Energiekonzerns Enron führten nicht nur zu einer drastischen Verschärfung der Berichtspflichten US-amerikanischer Unternehmen, sondern auch zum größten bis heute veröffentlichen Datensatz interner E-Mails. Mit dem von Quodera entwickelten Enron-Explorer können die E-Mails schnell und einfach durchsucht werden. Die Beziehungen zwischen den involvierten Personen können als Graphen dargestellt werden und ermöglichen ein intuitives Erkunden des Datensatzes. Mit Hilfe von Deep Learning wurden E-Mails thematischen Klassen zugeordnet, die das Finden relevanter Informationen weiter erleichtern. Die präsentierten Konzepte können leicht auf verschiedene Aufgaben des Wissensmanagements oder der Dokumentenverwaltung übertragen werden."
+    file="needle_hay.jpg"
+  }}
+    <div class="references-logo-area">
+      {{> logo file="logo_react.png" name="React"}}
+      {{> logo file="logo_neo4j.png"}}
+      {{> logo file="logo_python.png" name="Python"}}
+      {{> logo file="logo_elastic.png"}}
+      {{> logo file="logo_docker.png"}}
     </div>
-    <div class="row margin-vertical-medium" >
-      <div class="col-sm-3 margin-bottom-small">
-        <div class="references-detail-image-cropper">
-          <img class="references-detail-cropped-image" src="assets/img/needle_hay.jpg">
-        </div>
-      </div>
-      <div class="col-sm-9">
-        <p class="margin-top-small references-detail-description">
-          Die Bilanzfälschungen des US-amerikanischen Energiekonzerns Enron führten nicht nur zu einer drastischen Verschärfung der Berichtspflichten US-amerikanischer Unternehmen, sondern auch zum größten bis heute veröffentlichen Datensatz interner E-Mails. Mit dem von Quodera entwickelten Enron-Explorer können die E-Mails schnell und einfach durchsucht werden. Die Beziehungen zwischen den involvierten Personen können als Graphen dargestellt werden und ermöglichen ein intuitives Erkunden des Datensatzes. Mit Hilfe von Deep Learning wurden E-Mails thematischen Klassen zugeordnet, die das Finden relevanter Informationen weiter erleichtern. Die präsentierten Konzepte können leicht auf verschiedene Aufgaben des Wissensmanagements oder der Dokumentenverwaltung übertragen werden.
-        </p>
-        <div class="references-logo-area">
-          {{> logo file="logo_react.png" name="React"}}
-          {{> logo file="logo_neo4j.png"}}
-          {{> logo file="logo_python.png" name="Python"}}
-          {{> logo file="logo_elastic.png"}}
-          {{> logo file="logo_docker.png"}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  {{/references-detail}}
 
-{{> references-navigation}}
+  {{> references-navigation}}
 
   {{> contacts}}
 

@@ -8,38 +8,23 @@
 
 <body>
 
-<!-- Top menu -->
-{{> header}}
+  <!-- Top menu -->
+  {{> header}}
 
-<!-- Required because otherwise content is below the header -->
-<div class="references-top-spacer" />
-
-<!-- Reference -->
-<div class="component two-col padding-top-small">
-  <div class="container text-center-small">
-    <div class="references-detail-header">
-    <h3 class="references-h3">Maschinenausfälle erkennen, bevor sie passieren.</h3>
+  {{#> references-detail
+    title="Maschinenausfälle erkennen, bevor sie passieren."
+    description="Moderne Fertigungsanlagen in der Automobilindustrie setzen auf  den Einsatz von Industrierobotern. Damit diese effizient arbeiten können, müssen Stillstände und Ausfallzeiten vermieden werden. Für einen großen deutschen Automobilhersteller analysierte Quodera die Sensordaten von Industrierobotern mit dem Ziel, Ausfallzeiten zu reduzieren. Mit Methoden des maschinellen Lernens wurden Anomalien in den Daten identifiziert, die auf künftige Ausfälle hinweisen. Ähnliche Analysen können in verschiedenen Bereichen der Produktion oder dem Betrieb von Anlagen eingesetzt werden, um in Maschinendaten relevante Muster zu erkennen und zukünftige Ereignisse vorhersagen."
+    file="kuka.png"
+  }}
+    <div class="references-logo-area">
+      {{> logo file="logo_jupyter.png" name="Jupyter Notebook"}}
+      {{> logo file="logo_python.png" name="Python"}}
+      {{> logo file="logo_numpy.png" name="Numpy"}}
+      {{> logo file="logo_azure.png"}}
     </div>
-    <div class="row margin-vertical-medium" >
-      <div class="col-sm-3 margin-bottom-small">
-        <img class="references-detail-image" src="assets/img/kuka.png">
-      </div>
-      <div class="col-sm-9">
-        <p class="margin-top-small references-detail-description">
-          Moderne Fertigungsanlagen in der Automobilindustrie setzen auf  den Einsatz von Industrierobotern. Damit diese effizient arbeiten können, müssen Stillstände und Ausfallzeiten vermieden werden. Für einen großen deutschen Automobilhersteller analysierte Quodera die Sensordaten von Industrierobotern mit dem Ziel, Ausfallzeiten zu reduzieren. Mit Methoden des maschinellen Lernens wurden Anomalien in den Daten identifiziert, die auf künftige Ausfälle hinweisen. Ähnliche Analysen können in verschiedenen Bereichen der Produktion oder dem Betrieb von Anlagen eingesetzt werden, um in Maschinendaten relevante Muster zu erkennen und zukünftige Ereignisse vorhersagen.
-        </p>
-        <div class="references-logo-area">
-          {{> logo file="logo_jupyter.png" name="Jupyter Notebook"}}
-          {{> logo file="logo_python.png" name="Python"}}
-          {{> logo file="logo_numpy.png" name="Numpy"}}
-          {{> logo file="logo_azure.png"}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  {{/references-detail}}
 
-{{> references-navigation}}
+  {{> references-navigation}}
 
   {{> contacts}}
 

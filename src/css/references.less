@@ -37,143 +37,117 @@
   }
 }
 
-.references-overview-image-cropper {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.references-overview-cropped-image {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
-}
-
-.references-overview-image {
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 300px;
-}
-
-.references-top-spacer {
-  padding-top: 80px;
-}
-
-.references-overview-description {
-  font-size: 20px;
-}
-
-.references-logo-area .logo {
-  width: auto;
-  height:40px;
-}
-
-.references-logo-area .logo-wrapper {
-  display: inline-block;
-  padding-right: 10px;
-  padding-bottom: 15px;
-}
-
-.references-detail-header {
-  margin-bottom: 30px;
-}
-
-.references-detail-description {
-  font-size: 15px;
-  text-align: justify;
-}
-
-.references-logo-area {
-  text-align: left;
-  margin-top: 25px;
-}
-
-.references-detail-image {
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 250px;
-}
-
-.references-detail-cropped-image {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
-}
-
-.references-detail-image-cropper {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.references-navigation-panel {
-  margin-top: 100px;
-
+.references-detail {
+  margin-top: 120px;
   @media @mobile {
-    display: none;
+    & {
+      margin-top: 100px;
+    }
+  }
+  .references-detail-header {
+    font-weight: 500;
+    margin-bottom: 20px;
+    @media @mobile {
+      & {
+        text-align: left;
+      }
+    }
+  }
+  .references-detail-description {
+    text-align: left;
+  }
+  .references-detail-image {
+    height: auto;
+    max-height: 300px;
+    @media @mobile {
+      & {
+        max-height: 200px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .references-logo-area {
+    margin-top: 25px;
+    text-align: left;
+    @media @mobile {
+      & {
+        text-align: center;
+      }
+    }
+    .logo-wrapper {
+      display: inline-block;
+      padding-right: 10px;
+      padding-bottom: 15px;
+      .logo {
+        vertical-align: middle;
+        height: 40px;
+      }
+    }
   }
 }
 
-.references-navigation-area {
-  display: flex;
-  justify-content: space-around;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  padding-left: 120px;
-}
+.references-navigation-panel {
+  h2 {
+    font-size: 24px;
+    text-align: left;
+    @media @notmobile {
+      & {
+        display: none;
+      }
+    }
+  }
+  .references-navigation-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media @mobile {
+      & {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
 
-.references-navigation-wrapper {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  height:100%;
-}
-
-.references-navigation-wrapper:hover {
-  background: #4d85cd;
-  color: white;
-}
-
-.references-navigation-wrapper:hover img {
-  background: #4d85cd;
-  color: white;
-  opacity: 1;
-  filter: none;
-}
-
-.references-navigation-area a {
-  text-decoration: none;
-  color: black;
-}
-
-.references-navigation-image {
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 50px;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-}
-
-.references-navigation-cropped-image {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-}
-
-.references-last {
-  border-right: none;
+    .references-navigation-wrapper {
+      padding: 2px 5px;
+      color: @text-color-secondary;
+      text-decoration: none;
+      @media @mobile {
+        & {
+          padding: 10px 0;
+        }
+      }
+      &:hover {
+        color: @text-color-primary;
+        text-decoration: none;
+        .references-navigation-image-wrapper .references-navigation-image {
+          opacity: 1;
+          filter: alpha(opacity=100);
+        }
+      }
+      .references-navigation-image-wrapper {
+        display: inline-block;
+        @media @mobile {
+          & {
+            width: 50px;
+            margin-right: 10px;
+          }
+        }
+        .references-navigation-image {
+          height: 50px;
+          opacity: 0.4;
+          filter: alpha(opacity=40);
+          @media @mobile {
+            & {
+              max-width: 50px;
+              height: auto;
+              max-height: 50px;
+              opacity: 1;
+              filter: alpha(opacity=100);
+            }
+          }
+        }
+      }
+    }
+  }
 }

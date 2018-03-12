@@ -8,36 +8,21 @@
 
 <body>
 
-<!-- Top menu -->
-{{> header}}
+  <!-- Top menu -->
+  {{> header}}
 
-<!-- Required because otherwise content is below the header -->
-<div class="references-top-spacer" />
-
-<!-- Reference -->
-<div class="component two-col padding-top-small">
-  <div class="container text-center-small">
-    <div class="references-detail-header">
-    <h3 class="references-h3">Komplexität in IT-Architektur verstehen.</h3>
+  {{#> references-detail
+    title="Komplexität in IT-Architektur verstehen."
+    description="Die IT-Architekturen von Banken sind geprägt von zahlreichen heterogenen Systemen. Durch historisches Wachstum der Applikationslandschaft und Zusammenschlüsse mit anderen Instituten entstehen komplexe und schwer überschaubare Architekturen. Für eine international tätige Bank hat Quodera die Architektur eines Geschäftsbereichs analysiert, formalisiert und Komplexitätstreiber identifiziert. Die Komplexität wurde hierbei über die Anzahl und Heterogenität der Schnittstellen bestimmt. Die visuelle Darstellung der Komplexität hilft Verantwortlichen innerhalb der Bank Herausforderungen in der Architektur zum Management zu kommunizieren und Handlungsbedarf zu belegen. Eine Formalisierung von IT-Architektur und Darstellung von Komplexität kann für Unternehmen verschiedener Branchen eine wichtige Entscheidungshilfe für strategische Architekturentscheidungen sein."
+    file="complex_tree.png"
+  }}
+    <div class="references-logo-area">
+      {{> logo file="logo_javaee.png"}}
+      {{> logo file="logo_mssql.png"}}
     </div>
-    <div class="row margin-vertical-medium" >
-      <div class="col-sm-3 margin-bottom-small">
-        <img class="references-detail-image" src="assets/img/complex_tree.png">
-      </div>
-      <div class="col-sm-9">
-        <p class="margin-top-small references-detail-description">
-          Die IT-Architekturen von Banken sind geprägt von zahlreichen heterogenen Systemen. Durch historisches Wachstum der Applikationslandschaft und Zusammenschlüsse mit anderen Instituten entstehen komplexe und schwer überschaubare Architekturen. Für eine international tätige Bank hat Quodera die Architektur eines Geschäftsbereichs analysiert, formalisiert und Komplexitätstreiber identifiziert. Die Komplexität wurde hierbei über die Anzahl und Heterogenität der Schnittstellen bestimmt. Die visuelle Darstellung der Komplexität hilft Verantwortlichen innerhalb der Bank Herausforderungen in der Architektur zum Management zu kommunizieren und Handlungsbedarf zu belegen. Eine Formalisierung von IT-Architektur und Darstellung von Komplexität kann für Unternehmen verschiedener Branchen eine wichtige Entscheidungshilfe für strategische Architekturentscheidungen sein.
-        </p>
-        <div class="references-logo-area">
-          {{> logo file="logo_javaee.png"}}
-          {{> logo file="logo_mssql.png"}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  {{/references-detail}}
 
-{{> references-navigation}}
+  {{> references-navigation}}
 
   {{> contacts}}
 

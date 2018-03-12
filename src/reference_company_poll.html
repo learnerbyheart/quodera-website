@@ -8,39 +8,24 @@
 
 <body>
 
-<!-- Top menu -->
-{{> header}}
+  <!-- Top menu -->
+  {{> header}}
 
-<!-- Required because otherwise content is below the header -->
-<div class="references-top-spacer" />
-
-<!-- Reference -->
-<div class="component two-col padding-top-small">
-  <div class="container text-center-small">
-    <div class="references-detail-header">
-    <h3 class="references-h3">Wissen, was die Kollegen denken.</h3>
+  {{#> references-detail
+    title="Wissen, was die Kollegen denken."
+    description="Entscheider in größeren Unternehmen nutzen Umfragen, um ein Meinungsbild ihrer Mitarbeiter einzufangen. Um den Datenschutzanforderungen gerecht zu werden kann man dabei nicht immer auf Drittanbieter-Lösungen mit Cloud-Speicherung zurückgreifen. Gleichzeitig möchte man nicht auf den Komfort moderner Lösungen verzichten, wie bspw. eine Teilnahme auf mobilen Endgeräten oder Echtzeit-Darstellung der Ergebnisse. Mit VOTIX hat Quodera eine moderne Web-Anwendung entwickelt, die Unternehmen für einfache und komfortable Umfragen einsetzen können. Die Software kann als hochskalierbare Cloud-Lösung genutzt werden oder innerhalb des Unternehmensnetzwerkes betrieben werden."
+    file="conversation.png"
+  }}
+    <div class="references-logo-area">
+      {{> logo file="logo_react.png" name="React"}}
+      {{> logo file="logo_graphql.png" name="GraphQL"}}
+      {{> logo file="logo_aws.png"}}
+      {{> logo file="logo_serverless.jpg"}}
+      {{> logo file="logo_semantic.jpeg" name="Semantic UI"}}
     </div>
-    <div class="row margin-vertical-medium" >
-      <div class="col-sm-3 margin-bottom-small">
-        <img class="references-detail-image" src="assets/img/conversation.png">
-      </div>
-      <div class="col-sm-9">
-        <p class="margin-top-small references-detail-description">
-          Entscheider in größeren Unternehmen nutzen Umfragen, um ein Meinungsbild ihrer Mitarbeiter einzufangen. Um den Datenschutzanforderungen gerecht zu werden kann man dabei nicht immer auf Drittanbieter-Lösungen mit Cloud-Speicherung zurückgreifen. Gleichzeitig möchte man nicht auf den Komfort moderner Lösungen verzichten, wie bspw. eine Teilnahme auf mobilen Endgeräten oder Echtzeit-Darstellung der Ergebnisse. Mit VOTIX hat Quodera eine moderne Web-Anwendung entwickelt, die Unternehmen für einfache und komfortable Umfragen einsetzen können. Die Software kann als hochskalierbare Cloud-Lösung genutzt werden oder innerhalb des Unternehmensnetzwerkes betrieben werden.
-        </p>
-        <div class="references-logo-area">
-          {{> logo file="logo_react.png" name="React"}}
-          {{> logo file="logo_graphql.png" name="GraphQL"}}
-          {{> logo file="logo_aws.png"}}
-          {{> logo file="logo_serverless.jpg"}}
-          {{> logo file="logo_semantic.jpeg" name="Semantic UI"}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  {{/references-detail}}
 
-{{> references-navigation}}
+  {{> references-navigation}}
 
   {{> contacts}}
 

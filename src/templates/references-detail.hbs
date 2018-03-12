@@ -1,0 +1,15 @@
+<div class="container section-container references-detail">
+  <h2 class="references-detail-header">{{title}}</h2>
+  <div class="row">
+    <div class="col-sm-3">
+      <img class="references-detail-image" src="assets/img/{{file}}">
+    </div>
+    <div class="col-sm-9">
+      <p class="references-detail-description">
+        {{description}}
+      </p>
+      <!-- Logos are passed outside -->
+      {{> @partial-block }}
+    </div>
+  </div>
+</div>
