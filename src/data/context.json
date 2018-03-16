@@ -50,58 +50,40 @@
   ],
   "servicesApplicationAreas": [
     {
-      "title": "Fertigung",
-      "items": [
-        "Visual quality control",
-        "Predictive maintenance",
-        "Demand forecasting",
-        "Early-warning systems"
-      ]
-    }, {
       "title": "Gesundheitswesen",
       "items": [
-        "Real-time medical diagnosis",
-        "Hospital readmission",
-        "Intelligent customer service",
-        "Designing treatment plans"
-      ]
-    }, {
-      "title": "Einzelhandel",
-      "items": [
-        "Churn prediction",
-        "Predicting customer lifetime value",
-        "Dynamic pricing",
-        "Product layout in stores",
-        "Product recommendation"
+        "Computergestützte Pathologie",
+        "Medizinische Diagnosen in Echtzeit",
+        "Optimierung von Behandlungsplänen"
       ]
     }, {
       "title": "Banken & Versicherungen",
       "items": [
-        "Churn prediction",
-        "Predicting customer lifetime value",
-        "Fraud detection",
-        "Cross-selling / up-selling opportunities",
-        "Lead prioritization",
-        "Loan default prediction"
+        "Automatisches Löschen von personenbezogenen Daten im Rahmen der DSGVO",
+        "Vorhersage von Kundenabwanderungen",
+        "Vohersage des Customer Lifetime Value",
+        "Fraud Detection",
+        "Cross-selling / Up-selling Möglichkeiten",
+        "Lead Priorisierung",
+        "Vorhersage von Kreditausfällen"
+      ]
+    }, {
+      "title": "Einzelhandel",
+      "items": [
+        "Vorhersage von Kundenabwanderungen",
+        "Vohersage des Customer Lifetime Value",
+        "Dynamische Preisdifferenzierung",
+        "Automatische Produktempfehlungen"
       ]
     }, {
       "title": "Marketing & Werbung",
       "items": [
-        "Logo detection and visibility analysis",
-        "Product recognition",
-        "Dynamic pricing",
-        "Marketing automation",
-        "Content generation and curation",
-        "Social listening"
-      ]
-    }, {
-      "title": "Öffentliche Sicherheit",
-      "items": [
-        "Predictive policing",
-        "Resource allocation",
-        "Traffic optimization",
-        "Vehicle automation",
-        "Satellite and drone imagery analytics"
+        "Logoerkennung",
+        "Produkterkennung",
+        "Dynamische Preisdifferenzierung",
+        "Marketing-Automatisierung",
+        "Automatische Content-Generierung and Optmierung",
+        "Social Media Analyse"
       ]
     }
   ],
