@@ -4,11 +4,12 @@
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
   margin: 10px 10px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-bottom: 10px;
+  padding: 15px;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .process-grid {
@@ -39,23 +40,11 @@
 
 .process-swing-area {
   display: flex;
-  position: absolute;
-  bottom: 0px;
-  justify-content: center;
-  // Absolute positioned div ignores parent padding-> padding added to absolute div
-  padding-right: 12px;
-  padding-bottom: 10px;
-
-  @media @mobile {
-    position: static;
-    bottom: auto;
-    padding-right: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 .process-swing-area figure {
   max-width: 25%;
+  margin-bottom: 0;
 }
 
 .process-swing-area figcaption {
@@ -92,19 +81,6 @@
 
 .process-story-area {
   display: flex;
-  position: absolute;
-  bottom: 0px;
-  justify-content: center;
-  // Absolute positioned div ignores parent padding-> padding added to absolute div
-  padding-right: 12px;
-  padding-bottom: 10px;
-
-  @media @mobile {
-    position: static;
-    bottom: auto;
-    padding-right: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 .process-story-area figcaption {
