@@ -1,5 +1,6 @@
 @navigationHeight: 60px;
 @logo_height: 20px;
+@logo_height_tablet: 15px;
 @dashOffsetCross: 0;
 @crossLength: 950px;
 @easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
@@ -39,21 +40,29 @@
 			}
 		}
 
+		@media @tablet {
+			font-size: 0.9rem;
+		}
+
 		.navigation-brand {
 			@media (max-width: 767px) {
-				& {
-					margin-top: 20px;
-					position: initial;
-				}
+				margin-top: 20px;
+				position: initial;
 			}
 			position: absolute;
 			left: 0;
 			top: calc(~"50% - " @logo_height / 2);
 			line-height: 0;
+			@media @tablet {
+				top: calc(~"50% - " @logo_height_tablet / 2);
+			}
 
 			#logo {
 				height: @logo_height;
 				width: auto;
+				@media @tablet {
+					height: @logo_height_tablet;
+				}
 
 				g {
 					fill: @color-primary;
@@ -75,13 +84,13 @@
 				height: @navigationHeight;
 				cursor: pointer;
 				transform: translate3d(0,0,0);
+				stroke: @color-primary;
 
 				path {
 					fill: none;
 					transition: stroke-dashoffset 0.5s @easing, stroke-dasharray 0.5s @easing;
 					stroke-width: 40px;
 					stroke-linecap: round;
-					stroke: @color-primary;
 					stroke-dashoffset: 0;
 
 					&#bottom,
@@ -214,6 +223,12 @@
 				}
 			}
 
+			@media @tablet {
+				button {
+					font-size: 0.9rem;
+				}
+			}
+
 			.btn-action {
 				@media (max-width: 767px) {
 					.open& {
@@ -229,17 +244,17 @@
 		}
 	}
 
-	&.navigation-no-bg {
+	&.navigation-no-bg:not(.open) {
 		background: transparent;
 		box-shadow: none;
 	}
 
-	&.navigation-inverse {
+	&.navigation-inverse:not(.open) {
 		color: white;
 
 		.navigation-header {
 			#logo g {
-				fill: @color-secondary;
+				fill: @text-color-primary-inverse;
 			}
 
 			.navigation-bar {
@@ -251,12 +266,17 @@
 					}
 				}
 			}
-		}
-
-		.navigation-call-to-action {
-			a {
-				color: @color-secondary;
+			.navigation-call-to-action {
+				button {
+					background: darken(@color-primary, 18%);
+				}
+			}
+			.navigation-toggle {
+				svg {
+					stroke: white;
+				}
 			}
 		}
+
 	}
 }

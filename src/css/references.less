@@ -128,23 +128,22 @@
       .references-navigation-image-wrapper {
         display: inline-block;
         @media @mobile {
-          & {
-            width: 50px;
-            margin-right: 10px;
-          }
+          width: 50px;
+          margin-right: 10px;
+        }
+        @media @tablet {
+          display: block;
         }
         .references-navigation-image {
           height: 50px;
           opacity: 0.4;
           filter: alpha(opacity=40);
           @media @mobile {
-            & {
-              max-width: 50px;
-              height: auto;
-              max-height: 50px;
-              opacity: 1;
-              filter: alpha(opacity=100);
-            }
+            max-width: 50px;
+            height: auto;
+            max-height: 50px;
+            opacity: 1;
+            filter: alpha(opacity=100);
           }
         }
       }
