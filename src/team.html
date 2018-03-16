@@ -10,92 +10,76 @@
 <body>
 
   <!-- Top menu -->
-  {{> header}}
-<div class="team-wrapper">
-  <div class="team-header"></div>
-  <p class="team-slogan">
-    <span class="underline">Zielorientiert</span>.
-    <span class="underline">Problembewusst</span>.
-    <span class="underline">Technologieverliebt</span>.
-  </p>
-</div>
+  {{> header team="true"}}
 
-  <div class="row team-row">
-    <div class="col-sm-7 team-col-left">
-      <div class="team-img-wrapper">
+  {{> welcome-team}}
+
+  <div class="section-container container">
+    <div class="row">
+      <div class="col-md-6">
         <div class="team-img team-img-goal-oriented"></div>
-        <h1 class="team-heading">Zielorientiert.</h1>
       </div>
-    </div>
-    <div class="col-sm-5 team-text-col">
-      <h2>An Ihren wirklichen Zielen.</h2>
-      <h3>Wenn Sie uns Ihr Vorhaben erklären hören wir Ihnen aufmerksam zu. Aber bringen Sie bitte Zeit für Rückfragen mit. Wird ein echtes Problem Ihrer Kunden gelöst? Wie lässt sich der Erfolg der Lösung messen? Was wollen Sie erreichen? Wir wollen Ihre Ziele kennenlernen, um diese gemeinsam zu erreichen.</h3>
+      <div class="col-md-6 team-text-col">
+        <h2>An Ihren wirklichen Zielen.</h2>
+        <img class="team-img-mobile" src="assets/img/table.JPG"/>
+        <p>Wenn Sie uns Ihr Vorhaben erklären hören wir Ihnen aufmerksam zu. Aber bringen Sie bitte Zeit für Rückfragen mit. Wird ein echtes Problem Ihrer Kunden gelöst? Wie lässt sich der Erfolg der Lösung messen? Was wollen Sie erreichen? Wir wollen Ihre Ziele kennenlernen, um diese gemeinsam zu erreichen.</p>
+      </div>
     </div>
   </div>
 
-  <div class="row team-row team-row-wrap-reverse">
-    <div class="col-sm-5 team-text-col">
-      <h2>In alle Richtungen.</h2>
-      <h3>Wir denken mit. Prozesse und Systeme in einem Unternehmen kommen selten ohne Schnittstellen aus. Wie lässt sich eine Lösung in das bestehende System integrieren? Wer wird sie zukünftig benutzen? Wir denken an die Konsequenzen unserer Entscheidungen und diskutieren gemeinsam, wie Sie optimal entscheiden.</h3>
-    </div>
-    <div class="col-sm-7 team-col-right">
-      <div class="team-img-wrapper">
+  <div class="section-container container">
+    <div class="row">
+      <div class="col-md-6">
         <div class="team-img team-img-problem-focused"></div>
-        <h1 class="team-heading">Problembewusst.</h1>
+      </div>
+      <div class="col-md-6 team-text-col order-first">
+        <h2>In alle Richtungen.</h2>
+        <img class="team-img-mobile" src="assets/img/team.jpeg"/>
+        <p>Wir denken mit. Prozesse und Systeme in einem Unternehmen kommen selten ohne Schnittstellen aus. Wie lässt sich eine Lösung in das bestehende System integrieren? Wer wird sie zukünftig benutzen? Wir denken an die Konsequenzen unserer Entscheidungen und diskutieren gemeinsam, wie Sie optimal entscheiden.</p>
       </div>
     </div>
   </div>
 
-  <div class="row team-row">
-    <div class="col-sm-7 team-col-left">
-      <div class="team-img-wrapper">
+  <div class="section-container container">
+    <div class="row">
+      <div class="col-md-6">
         <div class="team-img team-img-technology-loving"></div>
-        <h1 class="team-heading">Technologieverliebt.</h1>
       </div>
-    </div>
-    <div class="col-sm-5 team-text-col">
-      <h2>Mit Leidenschaft.</h2>
-      <h3>Wir lieben es Ideen mit Technologie umzusetzen. Wenn wir eine Lösungsarchitektur präsentieren, Ihnen beschreiben wie einzelne Tools zusammenspielen, damit aus einem Datenstrom am Ende Wissen entsteht - dann können Sie die Begeisterung spüren, die uns bei jedem Projekt antreibt.</h3>
+      <div class="col-md-6 team-text-col">
+        <h2>Mit Leidenschaft.</h2>
+        <img class="team-img-mobile" src="assets/img/code.jpeg"/>
+        <p>Wir lieben es Ideen mit Technologie umzusetzen. Wenn wir eine Lösungsarchitektur präsentieren, Ihnen beschreiben wie einzelne Tools zusammenspielen, damit aus einem Datenstrom am Ende Wissen entsteht - dann können Sie die Begeisterung spüren, die uns bei jedem Projekt antreibt.</p>
+      </div>
     </div>
   </div>
 
-  <div class="row team-row">
-    <div class="col-sm-4 team-col-left team-col-right">
-      <div class="team-img-wrapper">
-        <div class="team-img-portrait"></div>
-        <div class="team-blur">
-          <h2 class="team-heading-portrait">Lucas Pradel, M.Sc.</h2>
-          <div class="team-social-link">
-            <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-twitter"></i></a>
-            <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-linkedin"></i></a>
-            <a target="_blank" href="https://facebook.com/quodera"><i class="fa fa-facebook"></i></a>
-          </div>
+  <div class="section-container container">
+    <h2>Gründer</h2>
+    <div class="row">
+      <div class="col-md-4 team-portrait">
+        <img class="team-portrait-img" src="assets/img/nils.jpg"  />
+        <h3 class="team-portrait-heading">Nils Siegfried, M.Sc.</h3>
+        <div class="team-portrait-social">
+          <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-twitter"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/nilssiegfried"><i class="fa fa-linkedin"></i></a>
         </div>
       </div>
-    </div>
-    <div class="col-sm-4 team-col-left team-col-right">
-      <div class="team-img-wrapper">
-        <div class="team-img-portrait"></div>
-        <div class="team-blur">
-          <h2 class="team-heading-portrait">Lucas Pradel, M.Sc.</h2>
-          <div class="team-social-link">
-            <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-twitter"></i></a>
-            <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-linkedin"></i></a>
-            <a target="_blank" href="https://facebook.com/quodera"><i class="fa fa-facebook"></i></a>
-          </div>
+
+      <div class="col-md-4 team-portrait">
+        <img class="team-portrait-img" src="assets/img/lucas.jpg"  />
+        <h3 class="team-portrait-heading">Lucas Pradel, M.Sc.</h3>
+        <div class="team-portrait-social">
+          <a target="_blank" href="https://twitter.com/learnerbyheart"><i class="fa fa-twitter"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/lucas-pradel"><i class="fa fa-linkedin"></i></a>
+          <a target="_blank" href="https://www.xing.com/profile/Lucas_Pradel"><i class="fa fa-xing"></i></a>
         </div>
       </div>
-    </div>
-    <div class="col-sm-4 team-col-left team-col-right">
-      <div class="team-img-wrapper">
-        <div class="team-img-portrait"></div>
-        <div class="team-blur">
-          <h2 class="team-heading-portrait">Lucas Pradel, M.Sc.</h2>
-          <div class="team-social-link">
-            <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-twitter"></i></a>
-            <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-linkedin"></i></a>
-            <a target="_blank" href="https://facebook.com/quodera"><i class="fa fa-facebook"></i></a>
-          </div>
+
+      <div class="col-md-4 team-portrait">
+        <img class="team-portrait-img" src="assets/img/moritz.jpg"  />
+        <h3 class="team-portrait-heading">Moritz Kohlhase, M.Sc.</h3>
+        <div class="team-portrait-social">
+          <a target="_blank" href="https://www.xing.com/profile/Moritz_Kohlhase"><i class="fa fa-xing"></i></a>
         </div>
       </div>
     </div>
