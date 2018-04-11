@@ -3,12 +3,14 @@ const handlebars = require('gulp-compile-handlebars');
 const watch = require('gulp-watch');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
 const gulpif = require('gulp-if');
 const less = require('gulp-less');
 const pump = require('pump');
 const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
 const runSequence = require('run-sequence');
+const sitemap = require('gulp-sitemap');
 
 const templateData = require('./src/data/context.json');
 
@@ -20,19 +22,19 @@ gulp.task('build-html', function() {
 
   return gulp.src('src/*.html')
     .pipe(handlebars(templateData, options))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(sitemap({
+      siteUrl: process.env.URL || 'http://quodera.com'
+    }))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build-js', function(cb) {
   const srcFiles = [
     'src/js/libs/jquery-3.2.1.js',
-    'src/js/libs/jquery-3.2.1.min.js',
     'src/js/libs/*.js',
     'src/js/scripts.js'
   ]
-  if(process.env.NODE_ENV !== 'production') {
-    srcFiles.push('!src/js/libs/*.min.js')
-  }
   pump([
     gulp.src(srcFiles),
     concat('bundle.js'),
@@ -56,13 +58,10 @@ gulp.task('build-css', ['compile-less'], function(cb) {
     'src/css/libs/*.css',
     'src/css/styles.css',
   ]
-  if(process.env.NODE_ENV !== 'production') {
-    srcFiles.push('!src/css/*.min.css')
-  }
   pump([
     gulp.src(srcFiles),
     concat('bundle.css'),
-    gulpif(process.env.NODE_ENV === 'production', uglify()),
+    gulpif(process.env.NODE_ENV === 'production', cleanCSS()),
     gulp.dest('dist')
   ], cb);
 });
@@ -104,3 +103,5 @@ gulp.task('watch', function() {
     runSequence('build-assets');
   });
 });
+
+gulp.task('build', ['build-html', 'build-js', 'build-css', 'build-assets']);
