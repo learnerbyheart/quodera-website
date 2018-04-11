@@ -1,10 +1,15 @@
 {
   "name": "quodera-website",
-  "version": "0.1.0",
+  "version": "0.8.0",
   "description": "Quodera website",
   "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "URL=http://quodera.com  gulp build",
+    "build:prod": "NODE_ENV=production URL=http://quodera.com gulp build",
+    "clean": "rm -rf dist/",
+    "deploy:dev": "npm run clean && npm run build:dev && aws s3 sync dist/ s3://quodera-website-dev",
+    "deploy:prod": "npm run clean && npm run build:prod && aws s3 sync dist/ s3://www.quodera.com",
+    "start": "URL=http://quodera.com gulp watch"
   },
   "repository": {
     "type": "git",
@@ -19,11 +24,13 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.3",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
     "gulp-less": "^3.4.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sitemap": "^5.0.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
     "pump": "^2.0.1",
