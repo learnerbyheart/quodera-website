@@ -59,7 +59,7 @@
     }, {
       "title": "Banken & Versicherungen",
       "items": [
-        "Automatisches Löschen von personenbezogenen Daten im Rahmen der DSGVO",
+        "Automatisches Löschen von personenbezogenen Daten im Rahmen der Datenschutzgrundverordnung (DSGVO)",
         "Vorhersage von Kundenabwanderungen",
         "Vohersage des Customer Lifetime Value",
         "Fraud Detection",
@@ -82,7 +82,7 @@
         "Produkterkennung",
         "Dynamische Preisdifferenzierung",
         "Marketing-Automatisierung",
-        "Automatische Content-Generierung and Optmierung",
+        "Automatische Content-Generierung and Optimierung",
         "Social Media Analyse"
       ]
     }

@@ -7,8 +7,9 @@
     "build:dev": "URL=http://quodera.com  gulp build",
     "build:prod": "NODE_ENV=production URL=http://quodera.com gulp build",
     "clean": "rm -rf dist/",
-    "deploy:dev": "npm run clean && npm run build:dev && aws s3 sync dist/ s3://quodera-website-dev",
-    "deploy:prod": "npm run clean && npm run build:prod && aws s3 sync dist/ s3://www.quodera.com",
+    "install:aws_cli": "pip install awscli",
+    "deploy:dev": "npm run clean && npm run build:dev && AWS_PROFILE=website aws s3 sync dist/ s3://quodera.com-dev",
+    "deploy:prod": "npm run clean && npm run build:prod && AWS_PROFILE=website aws s3 sync dist/ s3://quodera.com",
     "start": "URL=http://quodera.com gulp watch"
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/LucasMoody/quodera-website#readme",
   "dependencies": {
+    "aws-sdk": "^2.229.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "^3.9.3",

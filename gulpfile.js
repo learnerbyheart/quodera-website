@@ -77,6 +77,12 @@ gulp.task('build-assets', function(cb) {
     gulp.dest('dist/fonts/')
   ]);
 
+  // copy favicon
+  pump([
+    gulp.src('src/assets/img/favicon.ico'),
+    gulp.dest('dist/')
+  ]);
+
   // copy svg icons into handlebars templates so that they can be imported
   pump([
     gulp.src('src/icons/**/*.svg'),
