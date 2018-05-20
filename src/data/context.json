@@ -35,7 +35,7 @@
       "items": [
         "Entwickeln einer Softwarelösung",
         "Integration des KI Modells in ein bestehendes System",
-        "Dokumentation und Schulung Ihrer Mitarbeiter"
+        "Dokumentation und Schulung Ihres Teams"
 
       ]
     }, {
@@ -60,7 +60,7 @@
       "title": "Banken & Versicherungen",
       "items": [
         "Automatisches Löschen von personenbezogenen Daten im Rahmen der Datenschutzgrundverordnung (DSGVO)",
-        "Vorhersage von Kundenabwanderungen",
+        "Vorhersage von Abwanderungen in der Kundschaft",
         "Vohersage des Customer Lifetime Value",
         "Fraud Detection",
         "Cross-selling / Up-selling Möglichkeiten",
@@ -70,7 +70,7 @@
     }, {
       "title": "Einzelhandel",
       "items": [
-        "Vorhersage von Kundenabwanderungen",
+        "Vorhersage von Abwanderungen in der Kundschaft",
         "Vohersage des Customer Lifetime Value",
         "Dynamische Preisdifferenzierung",
         "Automatische Produktempfehlungen"
