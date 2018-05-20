@@ -9,7 +9,7 @@
     "clean": "rm -rf dist/",
     "install:aws_cli": "pip install awscli",
     "deploy:dev": "npm run clean && npm run build:dev && AWS_PROFILE=website aws s3 sync dist/ s3://quodera.com-dev && opn http://quodera.com-dev.s3-website.eu-central-1.amazonaws.com/",
-    "deploy:prod": "npm run clean && npm run build:prod && AWS_PROFILE=website aws s3 sync dist/ s3://quodera.com && opn http://www.quodera.com.s3-website.eu-central-1.amazonaws.com/",
+    "deploy:prod": "npm run clean && npm run build:prod && AWS_PROFILE=website aws s3 sync dist/ s3://quodera.com && opn http://quodera.com.s3-website.eu-central-1.amazonaws.com/",
     "start": "URL=http://quodera.com && opn $(pwd)/dist/index.html && gulp watch"
   },
   "repository": {
