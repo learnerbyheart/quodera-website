@@ -60,7 +60,7 @@
       "title": "Banken & Versicherungen",
       "items": [
         "Automatisches Löschen von personenbezogenen Daten im Rahmen der Datenschutzgrundverordnung (DSGVO)",
-        "Vorhersage von Abwanderungen in der Kundschaft",
+        "Vorhersage von Kundenabwanderungen",
         "Vohersage des Customer Lifetime Value",
         "Fraud Detection",
         "Cross-selling / Up-selling Möglichkeiten",
@@ -70,7 +70,7 @@
     }, {
       "title": "Einzelhandel",
       "items": [
-        "Vorhersage von Abwanderungen in der Kundschaft",
+        "Vorhersage von Kundenabwanderungen",
         "Vohersage des Customer Lifetime Value",
         "Dynamische Preisdifferenzierung",
         "Automatische Produktempfehlungen"
