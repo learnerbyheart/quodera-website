@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head
+      title="Personar"
+      description="Personar erkennt personenbezogene Daten in unstrukturierten Textdokumenten."
+    }}
+  </head>
+  <body>
+    <!-- Top menu -->
+    {{> header}}
+
+    <div class="welcome-section">
+      <div class="container">
+
+      <div class="row">
+        <div class="col-sm-8" style="display: flex; align-items: center;">
+          <div style="display: flex;
+  align-items: flex-start; flex-direction: column; align-content: flex-start;">
+          <p style="font-size:24pt; text-align: left;">
+            „Mit dem Quodera Personar finden Sie
+            personenbezogene Daten dort, wo sie
+            eigentlich gar nicht hingehören – in E-Mails,
+            Ordnern, Textdokumenten oder Wikis.“
+          </p>
+
+          <button class="btn btn-action">Demo vereinbaren</button>
+
+          </div>
+        </div>
+        <div class="col-sm-4 {{#if pictureRight}}order-md-12{{/if}}">
+          <img class="references-overview-image" src="assets/img/pbd.png">
+        </div>
+      </div>
+      </div></div>
+        <div style="background-color:#5b9bd5; height:250px;">
+          Personar spart Zeit gegenüber dem manuellen Durchsuchen.
+          Bei jeder Anfrage, jedem Mitarbeiter und jeder E-Mail
+        </div>
+
+    <div class="container">
+
+        <div class="row">
+          <div class="col-sm-5" style="font-size:20pt; text-align: left;">
+            Haben Sie die DSGVO bei
+            unstrukturierten Texten im Griff?
+            <br/>Finden Sie es heraus mit unserer
+            2-minütigen Umfrage
+             </div>
+          <div class="col-sm-7">
+            <div class="process-box"> <!--- Padding muss weg -->
+            <div class="typeform-widget" data-url="https://peterparker22.typeform.com/to/E4X1UP" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+            </div>
+          </div>
+
+
+
+    </div>
+
+    </div>
+
+
+
+    <!-- Contact -->
+    {{> contacts}}
+
+    <!-- Javascript -->
+    <script src="bundle.js"></script>
+  </body>
+</html>
