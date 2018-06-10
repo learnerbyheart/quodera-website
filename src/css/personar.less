@@ -1,0 +1,48 @@
+.personar {
+  .personar-case {
+    .personar-screenshot {
+      margin-left: auto;
+      margin-right: auto;
+      height: 200px;
+    }
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .personar-text {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media @mobile {
+        & {
+          margin-top: 20px;
+        }
+      }
+      word-break: break-word;
+      ul {
+        list-style: none;
+        padding-left: 10px;
+        li {
+          background-image: url("./assets/img/plus-icon.png");
+          line-height: 19px;
+          padding-left: 30px;
+          background-repeat: no-repeat;
+          background-size: 20px;
+          margin: 10px 0;
+        }
+      }
+      .personar-title {
+        font-size: 28px;
+        font-weight: 400;
+      }
+      .personar-bullet {
+        color: @text-color-secondary;
+        font-size: 20px;
+      }
+    }
+  }
+}
