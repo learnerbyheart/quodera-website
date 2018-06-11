@@ -1,0 +1,53 @@
+@close-btn-size: 50px;
+
+#cookie-popup {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  left: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  max-width: 600px;
+
+  @media @mobile {
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  #cookie-popup--close-button {
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    right: -15px;
+    top: -15px;
+    background-size: 20px;
+    background-color: #48555D;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-shadow: 0 0 0 3px #fff;
+    background-position: center center;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNTciIGhlaWdodD0iMzU3IiB2aWV3Qm94PSIwIDAgMzU3IDM1NyI+PHBhdGggZD0iTTM1NyAzNS43TDMyMS4zIDAgMTc4LjUgMTQyLjggMzUuNyAwIDAgMzUuN2wxNDIuOCAxNDIuOEwwIDMyMS4zIDM1LjcgMzU3bDE0Mi44LTE0Mi44TDMyMS4zIDM1N2wzNS43LTM1LjctMTQyLjgtMTQyLjgiIGZpbGw9IiNGRkYiLz48L3N2Zz4=);
+    &:hover {
+      background-color: black;
+    }
+  }
+  .actions {
+    margin-top: 20px;
+    & > * {
+      margin: 0 5px;
+    }
+    #reject-cookies {
+      color: @text-color-primary;
+      &:hover {
+        background: #444444;
+        color: @text-color-primary-inverse;
+      }
+    }
+  }
+}
