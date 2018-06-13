@@ -1,13 +1,26 @@
 /***** Contacts *****/
 .contacts-container {
-  //.background();
   font-weight: 200;
-  //color: white;
   box-shadow: inset 0 3px 9px -3px rgb(234, 232, 232);
   padding-top: 40px;
+  margin-top: 80px;
+  @media @mobile {
+    margin-top: 20px;
+  }
   padding-bottom: 30px;
   position: relative;
   background: rgb(248, 248, 248);
+
+  &.fullscreen {
+    padding-top: 150px;
+    height: 100vh;
+    @media @mobile {
+      padding-top: 100px;
+    }
+    .go-to-start {
+      display: none;
+    }
+  }
 
   .contacts-mail {
     font-size: 25px;

@@ -1,9 +1,20 @@
 .personar {
+  .welcome-section {
+    text-align: left;
+    h3 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .request-demo {
+      margin-top: 20px;
+    }
+  }
+
   .personar-case {
     .personar-screenshot {
       margin-left: auto;
       margin-right: auto;
-      height: 200px;
+      width: 100%;
     }
     &:not(:first-child) {
       margin-top: 20px;
@@ -16,6 +27,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 20px;
 
       @media @mobile {
         & {
@@ -26,22 +38,83 @@
       ul {
         list-style: none;
         padding-left: 10px;
+        .personar-bullet {
+          color: @text-color-secondary;
+          font-size: 20px;
+          line-height: 1.5;
+          text-indent: -15px;
+          padding-left: 18px;
+          &::before {
+            content: "\2795";
+            padding-right: 5px;
+            display: inline-block;
+            color: rgba(0,0,0,0);
+            text-shadow: 0 0 @color-primary;
+            font-size: 15px;
+          }
+        }
         li {
-          background-image: url("./assets/img/plus-icon.png");
-          line-height: 19px;
-          padding-left: 30px;
-          background-repeat: no-repeat;
-          background-size: 20px;
-          margin: 10px 0;
         }
       }
       .personar-title {
         font-size: 28px;
         font-weight: 400;
       }
-      .personar-bullet {
-        color: @text-color-secondary;
-        font-size: 20px;
+    }
+    .request-steps {
+      font-size: 20px;
+      li {
+        line-height: 1.5;
+        font-size: 22px;
+        text-align: left;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .customer-value {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: @color-primary;
+    color: @text-color-primary-inverse;
+    margin-bottom: 80px;
+    h2 {
+      line-height: 1.5;
+    }
+    .request-demo {
+      background-color: @color-secondary;
+      color: @text-color-primary;
+      margin-top: 30px;
+    }
+  }
+
+  .architecture {
+    margin-bottom: 80px;
+    h2 {
+      text-align: left;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+  }
+
+  .poll {
+    text-align: left;
+    h2 {
+      color: @color-primary;
+      font-weight: bold;
+    }
+    h2, h3 {
+      margin-left: 10px;
+    }
+    .cookies-not-activated {
+      margin: 0 10px;
+      margin-top: 30px;
+      button {
+        margin-top: 20px;
       }
     }
   }

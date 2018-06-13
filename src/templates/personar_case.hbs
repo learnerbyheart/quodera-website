@@ -1,19 +1,15 @@
-<div class="personar-case">
-  <div class="row">
-    <div class="col-sm-6 {{#if pictureRight}}order-md-12{{/if}}">
-      <img class="personar-screenshot" src="assets/img/{{file}}">
-    </div>
-    <div class="col-sm-6 personar-text">
+<div class="personar-case section-container">
+  <div class="personar-text">
 
-      <h3 class="personar-title">{{title}}</h3>
-<ul>
+    <h3 class="personar-title">{{title}}</h3>
+    <ul>
       <li class="personar-bullet">
         {{bullet1}}
       </li>
       <li class="personar-bullet">
         {{bullet2}}
       </li>
-</ul>
-    </div>
+    </ul>
   </div>
+  {{#if file}}<img class="personar-screenshot" src="assets/img/{{file}}">{{/if}}
 </div>

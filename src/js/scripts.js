@@ -33,6 +33,26 @@ function getCookie(cname) {
     return "";
 }
 
+function activateTypeformPoll() {
+	$('.cookies-not-activated').hide();
+	$('.typeform-widget').show();
+	(function() {
+		var qs, js, q, s, d = document,
+			gi = d.getElementById,
+			ce = d.createElement,
+			gt = d.getElementsByTagName,
+			id = "typef_orm",
+			b = "https://embed.typeform.com/";
+		if (!gi.call(d, id)) {
+			js = ce.call(d, "script");
+			js.id = id;
+			js.src = b + "embed.js";
+			q = gt.call(d, "script")[0];
+			q.parentNode.insertBefore(js, q)
+		}
+	})();
+}
+
 function activateGoogleAnalytics() {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -74,6 +94,7 @@ function checkTracking() {
   } else if(getCookie('useTracking') === 'true') {
     // user has accepted tracking
     activateGoogleAnalytics();
+		activateTypeformPoll();
   } else {
     // user has not anwered tracking question
     // ==> show dialog

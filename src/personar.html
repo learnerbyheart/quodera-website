@@ -1,102 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    {{> head
-      title="Personar"
-      description="Personar erkennt personenbezogene Daten in unstrukturierten Textdokumenten."
-    }}
-  </head>
-  <body>
-    <!-- Top menu -->
-    {{> header}}
+<html lang="de">
 
-    <div class="personar">
+<head>
+  {{> head title="Personar" description="Personar erkennt personenbezogene Daten in unstrukturierten Textdokumenten." }}
+</head>
+
+<body>
+  <!-- Top menu -->
+  {{> header personar="true"}}
+
+
+  <div class="personar">
+    <div class="welcome-section">
       <div class="container">
-        <div class="welcome-section">
-          <div class="row">
-            <div class="col-sm-8" style="display: flex; align-items: center;">
-              <div style="display: flex; align-items: flex-start; flex-direction: column; align-content: flex-start;">
-              <p style="font-size:24pt; text-align: left;">
-                „Mit dem Quodera Personar finden Sie
-                personenbezogene Daten dort, wo sie
-                eigentlich gar nicht hingehören – in E-Mails,
-                Ordnern, Textdokumenten oder Wikis.“
-              </p>
-
-              <button class="btn btn-action">Demo vereinbaren</button>
-
-              </div>
-            </div>
-            <div class="col-sm-4 {{#if pictureRight}}order-md-12{{/if}}">
-              <img class="references-overview-image" src="assets/img/pbd.png">
-            </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Personar für die DSGVO</h2>
+            <h3>„Mit dem Quodera Personar finden Sie personenbezogene Daten dort, wo sie eigentlich gar nicht hingehören – in E-Mails, Ordnern, Textdokumenten oder Wikis.“</h3>
+            <button onclick="$('html, body').animate({scrollTop: $('#contacts').offset().top}, 2000);" class="btn btn-primary request-demo">Demo vereinbaren</button>
+          </div>
+          <div class="col-md-4">
+            <img class="references-overview-image" src="assets/img/pbd.png">
           </div>
         </div>
-
-        {{> horizontal-divider}}
-
-        {{> personar_case
-        file="complex_tree.png"
-        title="Personar löscht alte Bewerberunterlagen in den E-Mail-Postfächern meiner Mitarbeiter."
-        bullet1="Volle Kontrolle: Der Mitarbeiter hat das letzte Wort bei der Löschung."
-        bullet2="Einfach: Überprüfung direkt in Outlook durch Plug-In"
-        }}
-
-        {{> personar_case
-        file="complex_tree.png"
-        pictureRight="true"
-        title="Personar zeigt mir, wo personenbezogene Daten in meinen Dokumenten stecken."
-        bullet1="Transparenz: Sie wissen, welche Daten in Ihren Systemen enthalten sind"
-        bullet2="Dokumentation: Bei einem Audit der Aufsichtsbehörde können Sie Statusberichte vorweisen"
-        }}
-
-        {{> personar_case
-        file="complex_tree.png"
-        title="Personar hilft mir, Betroffenenanfragen zu bearbeiten."
-        bullet1="Performanz: Schneller als Volltextsuche durch Personenindizierung"
-        bullet2="Effizient: Workflowunterstützung durch intuitive Weboberfläche"
-        }}
-
-        {{> horizontal-divider}}
-
-        <img src="./assets/img/personar_tech.png" />
-
-
       </div>
-
-
-        <div style="background-color:#5b9bd5; height:250px;">
-          Personar spart Zeit gegenüber dem manuellen Durchsuchen.
-          Bei jeder Anfrage, jedem Mitarbeiter und jeder E-Mail
-        </div>
+    </div>
 
     <div class="container">
 
-        <div class="row">
-          <div class="col-sm-5" style="font-size:20pt; text-align: left;">
-            Haben Sie die DSGVO bei
-            unstrukturierten Texten im Griff?
-            <br/>Finden Sie es heraus mit unserer
-            2-minütigen Umfrage
-             </div>
-          <div class="col-sm-7">
-            <div class="process-box"> <!--- Padding muss weg -->
-            <div class="typeform-widget" data-url="https://peterparker22.typeform.com/to/E4X1UP" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-            </div>
-          </div>
+      {{> horizontal-divider}}
+
+      {{> personar_case
+        file="Outlook.png"
+        title="Personar löscht alte Bewerberunterlagen in den E-Mail-Postfächern meiner Mitarbeiter."
+        bullet1="Volle Kontrolle: Der Mitarbeiter hat das letzte Wort bei der Löschung."
+        bullet2="Einfach: Überprüfung direkt in Outlook durch Plugin" }}
+
+      {{> personar_case
+        file="Analyse_Überblick.png"
+        pictureRight="true"
+        title="Personar zeigt mir, wo personenbezogene Daten in meinen Dokumenten stecken."
+        bullet1="Transparenz: Sie wissen, welche Daten in Ihren Systemen enthalten sind"
+        bullet2="Dokumentation: Bei einem Audit der Aufsichtsbehörde können Sie Statusberichte vorweisen" }}
+
+      <div class="personar-case section-container">
+        <div class="personar-text">
+
+          <h3 class="personar-title">Personar hilft mir, Betroffenenanfragen zu bearbeiten.</h3>
+          <ul>
+            <li class="personar-bullet">
+              Performanz: Schneller als Volltextsuche durch Personenindizierung
+            </li>
+            <li class="personar-bullet">
+              Effizient: Workflowunterstützung durch intuitive Weboberfläche
+            </li>
+          </ul>
+        </div>
+        <ol class="request-steps">
+          <li>Betroffenenanfrage trifft ein</li>
+          <li>Zusammenfassung der Datensätze</li>
+          <li>Anzeige von potentiell zu löschenden Datensätzen</li>
+          <li>Überprüfung der Datensätze</li>
+          <li>Beantwortung der Anfrage</li>
+        </div>
+      </ol>
+
+
+      {{> horizontal-divider}}
 
     </div>
 
+    <div class="architecture section-container container">
+      <h2>Modulare Software mit verschiedenen Plugins, die Daten per REST-API an ein Kernsystem senden.</h2>
+      <img src="./assets/img/Architecture.png" />
     </div>
 
+
+    <div class="section-container customer-value">
+      <div class="container">
+        <h2>Personar spart Zeit gegenüber dem manuellen Durchsuchen. Bei jeder Anfrage, jedem Mitarbeiter und jeder E-Mail.</h2>
+        <button onclick="$('html, body').animate({scrollTop: $('#contacts').offset().top}, 2000);" class="btn request-demo">Demo vereinbaren</button>
+      </div>
     </div>
 
-    <!-- Contact -->
-    {{> contacts}}
+    <div class="poll section-container container">
+      <h2>Haben Sie die DSGVO bei unstrukturierten Texten im Griff?</h2>
+      <h3>Finden Sie es heraus mit unserer 2-minütigen Umfrage</h3>
+      <div>
+        <div class="cookies-not-activated">
+            <div>Sie können nur an der Umfrage teilnehmen, wenn Sie die Verwendung von Cookies akzeptieren. Weitere Informationen dazu finden Sie in unserer <a href="privacy.html">Datenschutzerklärung</a>.</div>
+            <button id="privacy-accept-cookie" style="display:none;" class="btn btn-primary" onclick="setTracking(true);location.reload();">Akzeptieren</button>
+        </div>
+        <div class="typeform-widget" data-url="https://nilssiegfried.typeform.com/to/e2Gwpu" style="width: 100%; height: 500px; display:none;"></div>
+      </div>
 
-    {{> cookie-popup}}
+    </div>
 
-    <!-- Javascript -->
-    <script src="bundle.js"></script>
-  </body>
+  </div>
+
+  <!-- Contact -->
+  {{> contacts}}
+
+  {{> cookie-popup}}
+
+  <!-- Javascript -->
+  <script src="bundle.js"></script>
+</body>
+
 </html>
