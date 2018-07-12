@@ -38,6 +38,9 @@
 }
 
 .references-detail {
+  h1 {
+    font-size: 36px;
+  }
   margin-top: 120px;
   @media @mobile {
     & {
@@ -64,6 +67,12 @@
         max-height: 200px;
         margin-bottom: 10px;
       }
+    }
+  }
+  .references-detail-links {
+    text-align: left;
+    a:not(:first-child) {
+      margin-left: 10px;
     }
   }
   .references-logo-area {
@@ -148,5 +157,20 @@
         }
       }
     }
+  }
+}
+.references-detail-screenshots {
+  h2 {
+    @media @mobile {
+      & {
+        text-align: left;
+        font-size: 24px;
+      }
+    }
+  }
+  img, video {
+    margin-top: 20px;
+    max-width: 900px;
+    width: 100%;
   }
 }

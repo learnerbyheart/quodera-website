@@ -89,7 +89,7 @@ function setTracking(useTracking) {
 
 function checkTracking() {
   // user has rejected tracking
-  if(getCookie('useTracking') === 'false') {
+  if(navigator.doNotTrack == 1 || getCookie('useTracking') === 'false') {
     //do nothing
   } else if(getCookie('useTracking') === 'true') {
     // user has accepted tracking
@@ -100,6 +100,17 @@ function checkTracking() {
     // ==> show dialog
     $('#cookie-popup').show();
   }
+}
+
+function initAutoVideoPlay(identifier) {
+	if($(identifier)) {
+		$(identifier).waypoint({
+			handler: function() {
+				$(identifier).get(0).play();
+			},
+			offset: 'bottom-in-view'
+		})
+	}
 }
 
 jQuery(document).ready(function() {
@@ -135,6 +146,9 @@ jQuery(document).ready(function() {
 			$('nav').toggleClass('navbar-show-bg');
 		}
 	});
+
+	initAutoVideoPlay('#voty_application_poll');
+	initAutoVideoPlay('#voty_poll_results');
 
     /*
         Wow
