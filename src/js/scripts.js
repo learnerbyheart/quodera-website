@@ -89,16 +89,20 @@ function setTracking(useTracking) {
 
 function checkTracking() {
   // user has rejected tracking
-  if(navigator.doNotTrack == 1 || getCookie('useTracking') === 'false') {
+  if(getCookie('useTracking') === 'false') {
     //do nothing
-  } else if(getCookie('useTracking') === 'true') {
-    // user has accepted tracking
-    activateGoogleAnalytics();
-		activateTypeformPoll();
   } else {
-    // user has not anwered tracking question
-    // ==> show dialog
-    $('#cookie-popup').show();
+		if(getCookie('useTracking') !== 'true') {
+			// user has not anwered tracking question
+	    // ==> show dialog
+	    $('#cookie-popup').show();
+		}
+    // if user has not rejected tracking => active tracking
+    activateGoogleAnalytics();
+		// activate typeform poll if it exists on the page
+		if($('.typeform-widget')) {
+			activateTypeformPoll();
+		}
   }
 }
 
