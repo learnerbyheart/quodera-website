@@ -50,68 +50,73 @@
   ],
   "servicesApplicationAreas": [
     {
-      "title": "Gesundheitswesen",
+      "title": "Moderne Webapplikation in der Cloud",
       "items": [
-        "Computergestützte Pathologie",
-        "Medizinische Diagnosen in Echtzeit",
-        "Optimierung von Behandlungsplänen"
+        "Migration von Legacy Anwendungen",
+        "Entwicklung eines Community Portals",
+        "Digitalisierung von Geschäftsprozessen",
+        "Redesign von Anwendungen",
+        "Globales Rollenmanagement mittels Identidy Provider (IdP)"
       ]
     }, {
-      "title": "Banken & Versicherungen",
+      "title": "Mobile Apps",
       "items": [
-        "Automatisches Löschen von personenbezogenen Daten im Rahmen der Datenschutzgrundverordnung (DSGVO)",
-        "Vorhersage von Kundenabwanderungen",
-        "Vohersage des Customer Lifetime Value",
-        "Fraud Detection",
-        "Cross-selling / Up-selling Möglichkeiten",
-        "Lead Priorisierung",
-        "Vorhersage von Kreditausfällen"
+        "Migration von Desktopanwendungen",
+        "Nutzung von Geschäftsanwendungen von unterwegs",
+        "Offline Verfügbarkeit von Geschäftsanwendungen",
+        "Nutzung von nativen Systemfunktionen wie Kamera, Bluetooth oder GPS"
       ]
     }, {
-      "title": "Einzelhandel",
+      "title": "Künstliche Intelligenz",
       "items": [
+        "Chatbots",
+        "Kategorisierung von Kundenanfragen",
         "Vorhersage von Kundenabwanderungen",
         "Vohersage des Customer Lifetime Value",
         "Dynamische Preisdifferenzierung",
-        "Automatische Produktempfehlungen"
+        "Automatische Produktempfehlungen",
+        "Logoerkennung in Medien",
+        "Produkterkennung in Medien"
       ]
     }, {
-      "title": "Marketing & Werbung",
+      "title": "Data Analytics",
       "items": [
-        "Logoerkennung",
-        "Produkterkennung",
-        "Dynamische Preisdifferenzierung",
-        "Marketing-Automatisierung",
-        "Automatische Content-Generierung and Optimierung",
-        "Social Media Analyse"
+        "Daten Visualisierung",
+        "Data Mining",
+        "Business Intelligence Anwendung",
+        "Online Analytical Processing (OLAP)",
+        "Einrichten von Data Lakes",
+        "Explorative Datenanalyse",
+        "Cluster Analyse",
+        "Clickstream-Analyse"
       ]
     }
   ],
   "servicesOffer": [
     {
-      "title": "Natural Language Processing",
+      "title": "Technologieberatung",
       "image": "./assets/img/folded-newspaper.png",
-      "description": "Verarbeitung und Generierung von Text- und Audioinhalten"
+      "description": "In Workshops erarbeiten wir mit Ihnen zukunftsfähige Konzepte zum Einsatz von Cloud & KI Technologien."
     },
     {
-      "title": "Computer Vision",
+      "title": "Moderne Webapplikation in der Cloud",
       "image": "./assets/img/object_detection.png",
-      "description": "Computergestütztes Verstehen von Inhalten in Bildern und Videos"
+      "description": "Wir digitalisieren Ihre Prozesse in benutzerfreundlichen Web-Applikationen in der Cloud."
     },
     {
-      "title": "Predictive Analytics",
+      "title": "Mobile Apps",
+      "image": "./assets/img/object_detection.png",
+      "description": "Wir sparen Ihnen Kosten mit einer plattformübergreifenden Entwicklung für iOS und Android."
+    },
+    {
+      "title": "Künstliche Intelligenz",
       "image": "./assets/img/predictive_analytics.png",
-      "description": "Analyse von vergangenen Daten, um zukünftige Entwicklungen vorherzusagen"
+      "description": "Methoden aus Natural Language Processing, Predictive Analytics oder Computer Vision automatisieren Ihre Prozesse oder verbessern Ihre Produkte"
     },
     {
       "title": "Data Analytics",
       "image": "./assets/img/dashboard.png",
-      "description": "Visualisierung des aktuellen Zustand eines Unternehmens, um bessere Entscheidungen zu treffen"
-    },
-    {
-      "title": "Dateninfrastruktur",
-      "image": "",
-      "description": "Aufbau von Dateninfrastruktur"
+      "description": "Wir visualisieren den aktuellen Zustand Ihres Unternehmens, damit Sie bessere Entscheidungen zu treffen"
     }
   ]
 }

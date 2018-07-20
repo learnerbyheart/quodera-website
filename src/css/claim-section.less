@@ -3,7 +3,7 @@
 .top-content {
   .background();
   height: 100vh;
-  max-height: 1000px;
+  max-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,12 @@
 
   .text {
     display: flex;
+    flex-direction: column;
+    text-align: left;
   	color: @text-color-primary;
+    @media @mobile {
+      text-align: center;
+    }
     h1 {
       line-height: 140%;
       font-weight: 300;
@@ -20,6 +25,10 @@
       .underline {
         color: @color-primary;
       }
+    }
+    h2 {
+      color: @text-color-secondary-inverse;
+      line-height: 1.5;
     }
   }
 
