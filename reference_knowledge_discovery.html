@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informationen in großen Datenmengen finden</title>
+<meta name="description" content="Wie Quodera aus 500.000 E-Mails einen Informationsexplorer baut.">
+<link href="https://quodera.com/" rel="canonical" />
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico?v=2">
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900">
+<link rel="stylesheet" href="bundle.css">
+
+<meta name="google-site-verification" content="zXcd3zL3XvNsm2jyD84gigVVwjAJ_VrKNtOsSMISdm8" />
+<meta name="google-site-verification" content="abUl_pCRQxKYXoixRHB0ixTsdlytJT5-gMUQjCcWXpw" />
+<meta name="google-site-verification" content="SKuyKQ0ND45ufAUQQjRrQ3LDUFUMtqJUTgHTScsuUqo" />
+</head>
+
+<body>
+
+  <!-- Top menu -->
+  <!-- Top menu -->
+  <nav class="navigation  " role="navigation">
+    <div class="container">
+      <div class="navigation-header">
+        <a class="navigation-brand" href="/">
+          <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 182.7 27" preserveAspectRatio="xMidYMid meet" style="enable-background:new 0 0 182.7 27;"
+            xml:space="preserve">
+          <g id="SvgjsG1009" transform="translate(-2.162003993988037,-13.804000854492188)" xmlns:name="mainText_mainfill">
+          	<path class="st0" d="M15.6,13.7c2.4,0,4.6,0.6,6.6,1.7s3.7,2.7,4.8,4.7c1.2,2,1.7,4.2,1.7,6.5c0,2.4-0.5,4.5-1.6,6.4
+          		c-1.1,1.9-2.5,3.2-4.3,4v0.1h7.7v3.1H15.5c-3.7,0-6.9-1.3-9.4-3.8s-3.9-5.7-3.9-9.4c0-2.4,0.6-4.7,1.7-6.7s2.8-3.7,4.9-4.8
+          		C10.8,14.3,13.1,13.7,15.6,13.7z M5.9,26.8c0,2.9,0.9,5.3,2.7,7.3c1.8,2,4.1,3,6.9,3c2.8,0,5.1-1,6.9-2.9c1.8-1.9,2.7-4.4,2.7-7.3
+          		c0-2.8-0.9-5.2-2.7-7S18.2,17,15.4,17c-2.6,0-4.9,0.9-6.7,2.8C6.8,21.7,5.9,24,5.9,26.8z M37.3,14.4v16c0,2.1,0.6,3.9,1.8,5.2
+          		c1.2,1.4,2.8,2.1,4.7,2.1c2,0,3.6-0.7,4.7-2.1c1.2-1.4,1.8-3.1,1.8-5.2v-16h3.5V31c0,1.8-0.4,3.4-1.3,5c-0.8,1.6-2,2.8-3.6,3.7
+          		c-1.6,0.9-3.3,1.3-5.2,1.3c-2.9,0-5.3-1-7.2-2.9c-1.9-1.9-2.8-4.3-2.8-7.1V14.4C33.8,14.4,37.3,14.4,37.3,14.4z M72,13.7
+          		c3.9,0,7.1,1.3,9.7,3.8c2.6,2.6,3.9,5.8,3.9,9.8c0,2.5-0.6,4.8-1.7,6.9c-1.1,2.1-2.8,3.7-4.9,4.9C76.8,40.4,74.5,41,72,41
+          		c-2.5,0-4.8-0.6-6.9-1.8c-2.1-1.2-3.7-2.8-4.9-4.9s-1.8-4.4-1.8-6.9c0-3.9,1.3-7.1,3.8-9.7C64.8,15,68,13.7,72,13.7L72,13.7z
+          		 M62.2,27.4c0,2.9,0.9,5.4,2.7,7.4c1.8,2,4.2,3,7,3c2.8,0,5.1-1,7-2.9c1.9-2,2.8-4.4,2.8-7.4c0-3-0.9-5.4-2.7-7.4
+          		c-1.8-2-4.2-2.9-7.1-2.9c-2.8,0-5.1,1-7,2.9C63.1,21.9,62.2,24.4,62.2,27.4z M99.2,14.4c2.8,0,5.2,0.6,7.2,1.7
+          		c2,1.1,3.6,2.7,4.7,4.7c1.1,2,1.6,4.2,1.6,6.6c0,2.4-0.6,4.6-1.8,6.6c-1.2,2-2.9,3.5-5,4.7c-2.1,1.1-4.5,1.7-7.2,1.7h-8.7V14.4
+          		C89.9,14.4,99.2,14.4,99.2,14.4z M98.1,37c2,0,3.8-0.4,5.4-1.2c1.6-0.8,3-1.9,3.9-3.3s1.4-3.2,1.4-5.2c0-2.9-0.9-5.3-2.7-7
+          		s-4.2-2.6-7.2-2.6h-5.5V37C93.5,37,98.1,37,98.1,37z M134.4,14.4v3.3h-13.2v7.7h12.3v3.3h-12.3V37h13.9v3.3h-17.4V14.4H134.4z
+          		 M149.4,14.4c2.5,0,4.5,0.6,6,1.9c1.4,1.3,2.2,3.1,2.2,5.3c0,1.7-0.6,3.2-1.8,4.5c-1.2,1.3-2.7,2.1-4.6,2.3h0l7.4,11.8h-4.4
+          		l-6.6-11.4h-3.9v11.4h-3.5V14.4C140.1,14.4,149.4,14.4,149.4,14.4z M148.3,25.8c1.8,0,3.2-0.3,4.1-1c0.9-0.7,1.3-1.7,1.3-3.2
+          		c0-2.8-1.8-4.2-5.4-4.2h-4.8v8.4H148.3z M173.8,14.4l11.1,25.9h-4.1l-2.6-6.4h-12.3l-2.6,6.4h-4.1l11.4-25.9H173.8L173.8,14.4z
+          		 M167.1,30.8h9.8L172,18.9H172L167.1,30.8z"/>
+          </g>
+          </svg>
+        </a>
+        <ul class="navigation-bar">
+          <li class=""><a href="services.html">Leistungen</a>
+            <div class="active-bar"></div>
+          </li>
+          <li class=""><a href="personar.html">Personar</a>
+            <div class="active-bar"></div>
+          </li>
+          <li class=""><a href="references.html">Referenzen</a>
+            <div class="active-bar"></div>
+          </li>
+          <li><a target="_blank" href="https://medium.com/quodera">Blog</a>
+            <div class="active-bar"></div>
+          </li>
+          <li class=""><a href="team.html">Team</a>
+            <div class="active-bar"></div>
+          </li>
+        </ul>
+        <div class="navigation-call-to-action">
+          <button class="btn btn-action" onclick="$('.navigation').removeClass('open');$('html, body').animate({scrollTop: $('#contacts').offset().top}, 2000);">Legen wir los</button>
+        </div>
+        <div class="navigation-toggle" onclick="$('.navigation').toggleClass('open');">
+          <svg viewBox="0 0 800 600">
+            <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+            <path d="M300,320 L540,320" id="middle"></path>
+            <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div class="container section-container references-detail">
+  <h1 class="references-detail-header">Informationen in großen Datenmengen finden.</h1>
+  <div class="row">
+    <div class="col-sm-3">
+      <img class="references-detail-image" src="assets/img/needle_hay.jpg">
+    </div>
+    <div class="col-sm-9">
+      <p class="references-detail-description">
+        Die Bilanzfälschungen des US-amerikanischen Energiekonzerns Enron führten nicht nur zu einer drastischen Verschärfung der Berichtspflichten US-amerikanischer Unternehmen, sondern auch zum größten bis heute veröffentlichen Datensatz interner E-Mails. Mit dem von Quodera entwickelten Enron-Explorer können die E-Mails schnell und einfach durchsucht werden. Die Beziehungen zwischen den involvierten Personen können als Graphen dargestellt werden und ermöglichen ein intuitives Erkunden des Datensatzes. Mit Hilfe von Deep Learning wurden E-Mails thematischen Klassen zugeordnet, die das Finden relevanter Informationen weiter erleichtern. Die präsentierten Konzepte können leicht auf verschiedene Aufgaben des Wissensmanagements oder der Dokumentenverwaltung übertragen werden.
+      </p>
+      <!-- Logos are passed outside -->
+          <div class="references-logo-area">
+            <div class="logo-wrapper">
+              <img class="logo" src="assets/img/logo_react.png" alt="React" />
+              
+            </div>
+            <div class="logo-wrapper">
+              <img class="logo" src="assets/img/logo_neo4j.png" alt="" />
+              
+            </div>
+            <div class="logo-wrapper">
+              <img class="logo" src="assets/img/logo_python.png" alt="Python" />
+              
+            </div>
+            <div class="logo-wrapper">
+              <img class="logo" src="assets/img/logo_elastic.png" alt="" />
+              
+            </div>
+            <div class="logo-wrapper">
+              <img class="logo" src="assets/img/logo_docker.png" alt="" />
+              
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+  <div class="references-navigation-panel">
+    <div class="container section-container">
+      <h2>Alle Referenzen</h2>
+      <div class="references-navigation-area">
+        <a href="reference_predictive_maintenance.html" class="references-navigation-wrapper">
+          <div class="references-navigation-image-wrapper">
+            <img class="references-navigation-image" src="assets/img/kuka.png">
+          </div>
+          <span>Predictive Maintenance</span>
+        </a>
+        <a href="reference_it_architecture_complexity.html" class="references-navigation-wrapper">
+          <div class="references-navigation-image-wrapper">
+            <img class="references-navigation-image" src="assets/img/complex_tree.png">
+          </div>
+          <span>Komplexität in IT-Architektur</span>
+        </a>
+        <a href="reference_company_poll.html" class="references-navigation-wrapper">
+          <div class="references-navigation-image-wrapper">
+            <img class="references-navigation-image" src="assets/img/conversation.png">
+          </div>
+          <span>Umfragen</span>
+        </a>
+        <a href="reference_knowledge_discovery.html" class="references-navigation-wrapper">
+          <div class="references-navigation-image-wrapper">
+            <img class="references-navigation-image" src="assets/img/needle_hay.jpg">
+          </div>
+          <span>Wissensmanagement</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to action -->
+  <div id="contacts" class="contacts-container " >
+    <div class="container wow fadeInUp">
+      <div class="contacts">
+        <h2 class="call-to-action">Legen wir los</h2>
+        <!--<h2>Packen wir es an</h2>-->
+        <div>
+          <div class="contacts-mail">
+            Schreiben Sie uns einfach über <a class="" href="mailto:info@quodera.com">info@quodera.com</a><br/>
+            oder rufen Sie uns unter <a class="" href="tel:061516293640">06151 6293640</a> an.
+          </div>
+        </div>
+  
+        <div class="social">
+          <a target="_blank" href="https://twitter.com/quodera_ai"><i class="fa fa-twitter"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/company/quodera/"><i class="fa fa-linkedin"></i></a>
+          <a target="_blank" href="https://facebook.com/quodera"><i class="fa fa-facebook"></i></a>
+        </div>
+  
+        <div class="impressum">
+          <a href="impressum.html">Impressum</a>
+          <span> | </span>
+          <a href="privacy.html">Datenschutzerklärung</a>
+          <span> | Quodera</span>
+        </div>
+  
+      </div>
+      <div class="go-to-start animated infinite pulse" href="#top" onclick="$('html, body').animate({ scrollTop: 0 }, 2000);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"><path fill-rule="evenodd" d="M10 10l-1.5 1.5L5 7.75 1.5 11.5 0 10l5-5z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-popup">
+    <a onclick="setTracking(false);$('#cookie-popup').hide();" id="cookie-popup--close-button"></a>
+    <span>Diese Seite verwendet Cookies von Drittanbietern, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anbieten zu können und die Zugriffe auf unsere Website zu analysieren. Weitere Informationen dazu finden Sie in unserer <a href="privacy.html">Datenschutzerklärung</a>.</span>
+    <div class="actions">
+      <button id="accept-cookies" onclick="setTracking(true);$('#cookie-popup').hide();" class="btn btn-primary">Verstanden</button>
+    </div>
+  </div>
+
+  <!-- Javascript -->
+  <script src="bundle.js"></script>
+
+</body>
+
+</html>
